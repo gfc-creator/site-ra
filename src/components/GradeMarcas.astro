@@ -1,0 +1,40 @@
+---
+import type { Marca } from "../lib/vitrine";
+
+interface Props {
+  titulo: string;
+  marcas: Marca[];
+}
+
+const { titulo, marcas } = Astro.props;
+---
+
+<div class="grid gap-4">
+  <h3 class="text-xl">{titulo}</h3>
+  <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+    {marcas.map((marca) => {
+      const conteudo = marca.logo ? (
+        <img
+          src={marca.logo}
+          alt={`Logo de ${marca.nome}`}
+          loading="lazy"
+          decoding="async"
+          class="max-h-14 w-auto max-w-full object-contain"
+        />
+      ) : (
+        <span class="text-center font-titulo font-semibold">{marca.nome}</span>
+      );
+      return (
+        <li class="flex min-h-24 items-center justify-center rounded-md border border-neutro-200 bg-neutro-0 p-4">
+          {marca.site ? (
+            <a href={marca.site} rel="noopener" aria-label={`Site de ${marca.nome}`}>
+              {conteudo}
+            </a>
+          ) : (
+            conteudo
+          )}
+        </li>
+      );
+    })}
+  </ul>
+</div>

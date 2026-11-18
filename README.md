@@ -11,6 +11,7 @@ Site em construção, com Astro, Tailwind CSS e tokens de marca. Comece por:
 | [`docs/analise-kit-inicial.md`](docs/analise-kit-inicial.md) | Análise do kit entregue pelo dono |
 | [`docs/empresa.md`](docs/empresa.md) | Dados oficiais da empresa que podem ser publicados |
 | [`docs/hospedagem-e-dominio.md`](docs/hospedagem-e-dominio.md) | Ambiente de testes, domínios e consulta de marca |
+| [`docs/vitrine.md`](docs/vitrine.md) | Como preencher parceiros e clientes |
 | [`docs/requisitos.md`](docs/requisitos.md) | Requisitos numerados |
 | [`docs/tecnologias.md`](docs/tecnologias.md) | Levantamento das tecnologias, com versões e fontes |
 | [`docs/decisoes.md`](docs/decisoes.md) | Registro das decisões |

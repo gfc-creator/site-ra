@@ -1,0 +1,68 @@
+---
+import GradeMarcas from "./GradeMarcas.astro";
+import { temVitrine, vitrine } from "../lib/vitrine";
+
+const { parceiros, clientes, depoimentos, projetos } = vitrine;
+---
+
+{temVitrine && (
+  <section
+    id="parceiros-e-clientes"
+    class="border-t border-neutro-200 py-16 md:py-24"
+    aria-labelledby="titulo-vitrine"
+  >
+    <div class="contido grid gap-12">
+      <h2 id="titulo-vitrine" class="text-3xl md:text-4xl">
+        Parceiros e clientes
+      </h2>
+
+      {clientes.length > 0 && <GradeMarcas titulo="Clientes" marcas={clientes} />}
+      {parceiros.length > 0 && <GradeMarcas titulo="Parceiros" marcas={parceiros} />}
+
+      {projetos.length > 0 && (
+        <div class="grid gap-4">
+          <h3 class="text-xl">Projetos realizados</h3>
+          <ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {projetos.map((projeto) => (
+              <li class="grid content-start gap-3">
+                {projeto.foto && (
+                  <img
+                    src={projeto.foto}
+                    alt={projeto.fotoDescricao ?? ""}
+                    loading="lazy"
+                    decoding="async"
+                    class="aspect-[3/2] w-full rounded-md object-cover"
+                  />
+                )}
+                <p class="text-sm font-semibold text-azul-700">
+                  {projeto.frente}
+                  {projeto.local && ` · ${projeto.local}`}
+                </p>
+                <h4 class="font-titulo text-lg font-extrabold">{projeto.titulo}</h4>
+                <p class="text-neutro-600">{projeto.descricao}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {depoimentos.length > 0 && (
+        <div class="grid gap-4">
+          <h3 class="text-xl">O que dizem sobre nós</h3>
+          <div class="grid gap-5 md:grid-cols-2">
+            {depoimentos.map((d) => (
+              <figure class="grid content-start gap-3 rounded-md bg-azul-100 p-6">
+                <blockquote class="text-lg">{d.texto}</blockquote>
+                <figcaption class="text-sm">
+                  <strong>{d.autor}</strong>
+                  {[d.cargo, d.empresa].filter(Boolean).length > 0 &&
+                    `, ${[d.cargo, d.empresa].filter(Boolean).join(", ")}`}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+)}
