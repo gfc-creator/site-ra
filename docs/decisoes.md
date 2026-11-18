@@ -24,4 +24,5 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-17 | O site não trata de CREA nem de quem executa os serviços de engenharia | Decidida | 2026-11-18 | Resposta do dono à P10 |
 | D-18 | Testes na Cloudflare Workers, em endereço `workers.dev` | Proposta | 2026-11-18 | `hospedagem-e-dominio.md` §1 |
 | D-19 | Registrar o domínio só depois de resolver o risco da marca | Proposta | 2026-11-18 | `hospedagem-e-dominio.md` §3 |
+| D-20 | Nome sempre completo: **RA Tech Energia** (revê D-14) | Decidida | 2026-11-18 | Resposta do dono à P14; reduz o risco apontado em `hospedagem-e-dominio.md` §3 |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |

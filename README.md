@@ -1,6 +1,6 @@
 # site-ra
 
-Identidade visual e site da **RA Tech**.
+Identidade visual e site da **RA Tech Energia**.
 
 Projeto em fase de definição: ainda não há código. Comece por:
 
