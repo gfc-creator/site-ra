@@ -15,6 +15,8 @@ export interface Marca extends Autorizado {
   logo?: string;
   /** Endereço completo do site, com https://. */
   site?: string;
+  /** O que foi feito para o cliente, por exemplo "Projeto de energia solar". */
+  atuacao?: string;
 }
 
 export interface Depoimento extends Autorizado {
@@ -35,8 +37,28 @@ export interface Projeto extends Autorizado {
   fotoDescricao?: string;
 }
 
-export const parceiros: Marca[] = [];
-export const clientes: Marca[] = [];
+/** Aguardando a data de autorização de cada um: sem ela, nada aparece no site. */
+const AGUARDANDO_AUTORIZACAO = "";
+const SOLAR = "Projeto de energia solar";
+
+export const parceiros: Marca[] = [
+  {
+    nome: "Elétrica Futura",
+    site: "https://www.eletricafutura.com.br/",
+    autorizadoEm: AGUARDANDO_AUTORIZACAO,
+  },
+  { nome: "Sou Energy", site: "https://souenergy.com.br/", autorizadoEm: AGUARDANDO_AUTORIZACAO },
+  { nome: "Nexen", autorizadoEm: AGUARDANDO_AUTORIZACAO },
+  { nome: "Fotus", site: "https://fotus.com.br/", autorizadoEm: AGUARDANDO_AUTORIZACAO },
+  { nome: "BelEnergy", site: "https://belenergy.com.br/", autorizadoEm: AGUARDANDO_AUTORIZACAO },
+];
+
+export const clientes: Marca[] = [
+  { nome: "Serra da Mangaba", atuacao: SOLAR, autorizadoEm: AGUARDANDO_AUTORIZACAO },
+  { nome: "Florida de Liz", atuacao: SOLAR, autorizadoEm: AGUARDANDO_AUTORIZACAO },
+  { nome: "Supermercado Miranda", atuacao: SOLAR, autorizadoEm: AGUARDANDO_AUTORIZACAO },
+];
+
 export const depoimentos: Depoimento[] = [];
 export const projetos: Projeto[] = [];
 
