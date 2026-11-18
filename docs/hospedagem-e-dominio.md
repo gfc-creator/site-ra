@@ -45,6 +45,21 @@ diferente da prevista para o site definitivo.
 | `ration.com.br` | Registrado por terceiro |
 | `aureatech.com.br` | Registrado por terceiro |
 
+### Registro recomendado
+
+**`ratechenergia.com.br`, no Registro.br.** Não há opção gratuita para `.com.br`: o Registro.br é
+o órgão oficial e cobra R$ 40 por ano, sem intermediário. Disponível na consulta de 2026-11-18.
+
+1. Em [registro.br](https://registro.br/), crie a conta com o CNPJ da empresa e registre o domínio.
+2. Na Cloudflare, adicione o domínio ao plano gratuito e copie os dois servidores DNS indicados.
+3. No Registro.br, troque os servidores DNS do domínio pelos da Cloudflare.
+4. No Worker `ra-tech-energia`, abra **Settings › Domains & Routes › Add › Custom Domain**.
+5. No lançamento, retire o `noindex` do site.
+
+O e-mail `contato@ratechenergia.com.br` pode ser encaminhado para uma caixa existente com o Email
+Routing da Cloudflare, disponível no plano gratuito. Ele só recebe mensagens; para enviar com esse
+endereço é preciso um serviço de e-mail.
+
 ## 3. Marca no INPI
 
 | Nome | Resultado |
@@ -59,7 +74,8 @@ também avalia semelhança e afinidade entre atividades.
 
 ## 4. Fontes
 
-- [Registro.br](https://registro.br/) · [Busca de marcas do INPI](https://busca.inpi.gov.br/pePI/)
+- [Registro.br](https://registro.br/) · [Valor do registro (NIC.br)](https://teletime.com.br/14/10/2026/br-6-milhoes/) · [Busca de marcas do INPI](https://busca.inpi.gov.br/pePI/)
+- [Domínios em Workers](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/) · [Email Routing](https://developers.cloudflare.com/email-routing/)
 - [Previews de Workers](https://developers.cloudflare.com/workers/previews/) ·
   [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/) ·
   [Limites de Builds](https://developers.cloudflare.com/workers/ci-cd/builds/limits-and-pricing/)
