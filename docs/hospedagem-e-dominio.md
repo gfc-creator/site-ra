@@ -52,7 +52,7 @@ diferente da prevista para o site definitivo.
 | RA Tech | **Risco.** Sem marca idêntica ativa, mas **RA TECHNOLOGICS** (processo 922459010) está em vigor na classe 37, com instalação, manutenção e reparo de computadores |
 | RA Tech Energia | Nenhum processo idêntico |
 | Ratech | Dois pedidos, ambos definitivamente arquivados (905124243 e 921000324) |
-| Radiantech | Nenhum processo encontrado |
+| Radiantech | **Risco maior.** Sem processo idêntico, mas há marcas parecidas em vigor no mesmo setor: RADIANTE ENERGIA SOLAR E INSTALAÇÕES (924170654), RADIANTE SOLAR (935935320), RADIANCE ENERGIA SOLAR (927209870) e RADIANT SOLUTIONS (914248863) |
 
 A consulta é preliminar e não substitui a análise de um especialista em marcas: o INPI
 também avalia semelhança e afinidade entre atividades.
