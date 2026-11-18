@@ -4,6 +4,13 @@ Seção pública da página inicial, com clientes, parceiros, projetos realizado
 **Fica oculta enquanto não houver conteúdo autorizado**, e o link do menu aparece sozinho
 quando ela for preenchida.
 
+## Situação
+
+Cadastrados em `src/lib/vitrine.ts`, **aguardando a autorização para aparecer no site**:
+
+- Parceiros: Elétrica Futura, Sou Energy, Nexen, Fotus e BelEnergy.
+- Clientes, todos com projeto de energia solar: Serra da Mangaba, Florida de Liz e Supermercado Miranda.
+
 ## Antes de publicar
 
 - Tenha a autorização por escrito de cada empresa ou pessoa citada; uma mensagem ou e-mail serve.

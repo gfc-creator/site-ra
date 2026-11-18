@@ -25,7 +25,7 @@ const { titulo, marcas } = Astro.props;
         <span class="text-center font-titulo font-semibold">{marca.nome}</span>
       );
       return (
-        <li class="flex min-h-24 items-center justify-center rounded-md border border-neutro-200 bg-neutro-0 p-4">
+        <li class="flex min-h-24 flex-col items-center justify-center gap-1 rounded-md border border-neutro-200 bg-neutro-0 p-4 text-center">
           {marca.site ? (
             <a href={marca.site} rel="noopener" aria-label={`Site de ${marca.nome}`}>
               {conteudo}
@@ -33,6 +33,7 @@ const { titulo, marcas } = Astro.props;
           ) : (
             conteudo
           )}
+          {marca.atuacao && <span class="text-sm text-neutro-600">{marca.atuacao}</span>}
         </li>
       );
     })}
