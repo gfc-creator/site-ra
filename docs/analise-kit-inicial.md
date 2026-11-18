@@ -32,9 +32,9 @@ Dados tirados do kit, **a confirmar com o dono**.
 
 | # | Problema | Por que importa | Encaminhamento |
 | --- | --- | --- | --- |
-| A1 | Oferta de engenharia sem registro ou responsável técnico identificado no kit (dono confirma que existem; faltam os dados para o site) | A Lei 5.194/1966 exige registro da firma no CREA antes de iniciar a atividade (art. 59) e profissional habilitado com autoria declarada (art. 8º, parágrafo único) | Dono confirmar CREA e responsável técnico |
+| A1 | Oferta de engenharia sem registro ou responsável técnico identificado no kit (execução por empresas contratadas, D-17) | A Lei 5.194/1966 exige registro da firma no CREA antes de iniciar a atividade (art. 59) e profissional habilitado com autoria declarada (art. 8º, parágrafo único) | Dono confirmar CREA e responsável técnico |
 | A2 | O simulador promete economia fixa de 90% | Para novas unidades, a Lei 14.300/2022 (art. 27) cobra 60% dos componentes de distribuição em 2026, 75% em 2027 e 90% em 2028; a economia real muda com o ano e com a conta | Refazer o cálculo com premissas explícitas |
-| A3 | Payback fixo de "2,8 a 3,5 anos" para qualquer conta | Não há cálculo nem fonte; promessa sem base pode caracterizar publicidade enganosa (CDC, art. 37) | Retirar ou calcular, sempre como estimativa |
+| A3 | Payback fixo de "2,8 a 3,5 anos" para qualquer conta | Não há cálculo nem fonte; promessa sem base pode caracterizar publicidade enganosa (CDC, art. 37) | Retirar (D-16) |
 | A4 | Sem razão social, CNPJ, política de privacidade e símbolo de acessibilidade | RF-04 e RF-05 | Incluir; dados em `empresa.md` |
 | A5 | Fontes do Google carregadas de servidor externo | O endereço IP do visitante vai a terceiros sem aviso | Servir as fontes do próprio site |
 

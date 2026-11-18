@@ -27,10 +27,11 @@ Se elas entram no site depende da pergunta P12.
 
 ## Pontos a tratar
 
-- **Marca e nome fantasia:** RA Tech & Energia não consta dos documentos. A marca pode
-  ser usada, mas o site precisa identificar a razão social. Avaliar a atualização do nome
-  fantasia e o pedido de registro da marca no INPI, em nome da empresa.
+- **Marca e nome fantasia:** a marca é RA Tech (D-14), que não consta dos documentos. O
+  site identifica a razão social. Avaliar a atualização do nome fantasia e o pedido de
+  registro da marca no INPI, em nome da empresa.
 - **Venda de painéis ao consumidor final:** conferir com o contador se os códigos atuais
   cobrem esse comércio.
 - **Endereço:** publicar só o município até o dono decidir sobre o endereço completo.
-- **CREA:** falta informar o número do registro e o responsável técnico a exibir.
+- **Engenharia contratada (D-17):** confirmar com o contador ou com o CREA se oferecer
+  esses serviços pela empresa, com execução por terceiros, exige registro próprio.

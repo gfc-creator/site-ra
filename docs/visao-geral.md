@@ -15,7 +15,7 @@ estão em [`empresa.md`](empresa.md).
 
 | # | Pergunta | O que ela decide | Resposta |
 | --- | --- | --- | --- |
-| P1 | A marca do site será RA Tech & Energia, embora o nome fantasia registrado seja outro? Quais cidades a empresa atende? | Marca, textos e busca no Google | **Pendente:** os documentos da empresa não citam RA Tech & Energia |
+| P1 | Qual é a marca do site e quais cidades a empresa atende? | Marca, textos e busca no Google | **Respondida:** marca **RA Tech**, com o complemento "& Energia"; atendimento sem limite de região (2026-11-18) |
 | P2 | Quem deve encontrar o site, e o que essa pessoa precisa fazer nele (ligar, pedir orçamento, comprar, conhecer)? | Estrutura e prioridade das páginas | Pendente |
 | P3 | O logo e a paleta do kit são definitivos ou podem ser redesenhados? | Criar do zero ou evoluir a marca | **Respondida:** pode redesenhar (2026-11-18) |
 | P4 | Quais páginas são necessárias? Haverá blog, notícias, loja ou área de cliente? | Arquitetura; loja ou login mudam a pilha | Pendente |
@@ -24,7 +24,9 @@ estão em [`empresa.md`](empresa.md).
 | P7 | O domínio `ratechenergia.com.br` já está registrado? | Publicação e e-mail | **Respondida:** nenhum domínio registrado (2026-11-18); registrar depois de definir a marca |
 | P8 | O site será só em português? | Estrutura de idiomas | Pendente |
 | P9 | Há prazo e limite de custo mensal? | Escolha de serviços pagos | Pendente |
-| P10 | A empresa tem CNPJ, registro no CREA e responsável técnico para a parte solar? | Se o site pode oferecer engenharia | **Respondida:** sim (2026-11-18); falta informar os dados a publicar |
-| P11 | O simulador solar deve continuar? | Risco de promessa sem base | **Respondida:** sim (2026-11-18), com premissas claras e como estimativa |
-| P12 | O site trata só de TI/Cloud e energia solar, ou também das outras atividades da empresa? | Escopo e páginas | Pendente |
-| P13 | Qual custo por kWp a empresa usa, para o simulador? | Cálculo de retorno | Pendente |
+| P10 | Quem executa os serviços de engenharia solar? | O que o site pode prometer | **Respondida:** empresas contratadas; o site não exibe dados de CREA (2026-11-18) |
+| P11 | O simulador solar deve continuar? | Risco de promessa sem base | **Respondida:** sim, em versão simples e como estimativa (2026-11-18) |
+| P12 | O site trata só de TI/Cloud e energia solar, ou também das outras atividades da empresa? | Escopo e páginas | **Respondida:** só as duas frentes (2026-11-18) |
+| P13 | Qual custo por kWp a empresa usa, para o simulador? | Cálculo de retorno | **Respondida:** não entra; o simulador não calcula retorno (2026-11-18) |
+
+As perguntas ainda pendentes afetam as páginas do site, e não a criação da marca.

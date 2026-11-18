@@ -5,7 +5,7 @@ Claude Code em toda sessão nesta pasta. O detalhe fica em `docs/`; não duplica
 
 ## Objetivo
 
-Criar a **identidade visual** e o **site** da RA.
+Criar a **identidade visual** e o **site** da RA Tech.
 
 ## Parâmetros
 
@@ -16,15 +16,15 @@ Criar a **identidade visual** e o **site** da RA.
 | Tecnologias | Atuais e estáveis | Definido pelo dono (2026-11-18) |
 | Documentação | Desde o início, como no projeto Porteira | Definido pelo dono (2026-11-18) |
 | Empresa | AF Carneiro Engenharia e Empreendimentos Sustentáveis Ltda | `docs/empresa.md` |
-| Marca do site | RA Tech & Energia, indicada no kit, **a confirmar** | `docs/visao-geral.md` P1 |
-| Páginas, idioma e domínio | **A definir** | `docs/visao-geral.md` §3 |
-| Pilha técnica | **Proposta, aguarda aprovação** | `docs/decisoes.md` |
+| Marca do site | **RA Tech**, com o complemento "& Energia" | Definido pelo dono (2026-11-18) |
+| Frentes do site | TI/Cloud e energia solar | Definido pelo dono (2026-11-18) |
+| Páginas, idioma e domínio | **A definir**; nenhum domínio registrado | `docs/visao-geral.md` §3 |
+| Pilha técnica | Aprovada como referência inicial | `docs/decisoes.md` |
 
 ## Estado atual
 
-Fase 0, definição. Só há documentação. Nada de marca ou de código começa antes de
-o dono responder às perguntas de `docs/visao-geral.md` §3 e aprovar as decisões
-de `docs/decisoes.md`.
+Fase 0 concluída com o merge do PR #1. Próxima etapa: Fase 1, identidade visual,
+começando por até 3 caminhos de conceito para o logo.
 
 ## Convenções de trabalho
 

@@ -34,7 +34,8 @@ definitivo. Este documento registra o processo e recebe as decisões do dono.
 
 | Item | Decisão | Data |
 | --- | --- | --- |
-| Conceito | Proposta do kit: monograma RA com feixe solar; a aprovar | 2026-11-18 |
+| Nome da marca | RA Tech, com o complemento "& Energia" (D-14) | 2026-11-18 |
+| Conceito | Proposta do kit: monograma RA com feixe solar; ponto de partida do redesenho (D-11) | 2026-11-18 |
 | Logo | A definir | — |
 | Cores | Proposta do kit: azul e âmbar; a aprovar | 2026-11-18 |
 | Tipografia | Proposta do kit: Inter; a aprovar | 2026-11-18 |
