@@ -13,7 +13,7 @@ publicação.
 | --- | --- |
 | Endereço de testes | `ra-tech-energia.<subdomínio-da-conta>.workers.dev`, sem precisar de domínio |
 | Atualização | Cada envio à branch `develop` publica o site sozinho |
-| Revisão de PR | Cada branch ganha um endereço próprio de pré-visualização |
+| Revisão de PR | Cada branch ganha um endereço próprio de pré-visualização, com `npx wrangler preview`; exige o bloco `previews` no `wrangler.jsonc` |
 | Custo | Requisições de arquivos estáticos são gratuitas |
 | Limites do plano gratuito | 3.000 minutos de compilação por mês, 1 compilação por vez, 100 pré-visualizações por site |
 | Busca no Google | O site de testes sai com `noindex`; retirar no lançamento (`public/_headers`, `public/robots.txt` e `src/layouts/Base.astro`) |
