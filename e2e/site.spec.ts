@@ -1,5 +1,6 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
+import { temVitrine, vitrine } from "../src/lib/vitrine.ts";
 
 const paginas = ["/", "/privacidade/", "/acessibilidade/"];
 
@@ -44,6 +45,28 @@ test("os botões de contato levam ao WhatsApp da empresa", async ({ page }) => {
   await page.goto("/");
   const contato = page.locator("#contato").getByRole("link", { name: /WhatsApp/ });
   await expect(contato).toHaveAttribute("href", /^https:\/\/wa\.me\/5599984500656/);
+});
+
+test("a seção de parceiros e clientes mostra os nomes e as imagens", async ({ page }) => {
+  await page.goto("/");
+  const secao = page.locator("#parceiros-e-clientes");
+  if (!temVitrine) {
+    await expect(secao).toHaveCount(0);
+    await expect(page.locator('a[href="/#parceiros-e-clientes"]')).toHaveCount(0);
+    return;
+  }
+  await expect(secao).toBeVisible();
+  for (const { nome } of [...vitrine.clientes, ...vitrine.parceiros]) {
+    await expect(secao).toContainText(nome);
+  }
+  await secao.scrollIntoViewIfNeeded();
+  const imagens = secao.locator("img");
+  for (const imagem of await imagens.all()) {
+    await imagem.scrollIntoViewIfNeeded();
+    await expect
+      .poll(() => imagem.evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth > 0))
+      .toBe(true);
+  }
 });
 
 test("o site de testes fica fora da busca", async ({ page }) => {

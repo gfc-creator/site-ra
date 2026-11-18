@@ -28,4 +28,6 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-21 | Guardar as 3 opções de logo sem aprovar nenhuma; até a escolha, o site mostra o nome em texto | Decidida | 2026-11-18 | Dono achou as opções simples e pediu para seguir |
 | D-22 | Premissas do simulador: tarifa de R$ 1/kWh, 125 kWh por mês por kWp e economia de 60% a 80% da conta | Proposta | 2026-11-18 | Valores de referência a validar pelo dono |
 | D-23 | Cores iniciais em azul e âmbar; títulos em Manrope e textos em IBM Plex Sans | Proposta | 2026-11-18 | Ponto de partida; pode mudar com o logo |
+| D-24 | Parceiros e clientes como vitrine pública, sem login | Decidida | 2026-11-18 | Dono escolheu a opção A; `vitrine.md` |
+| D-25 | Publicar parceiros e clientes sem registro de autorização; quem não tem logo usa a imagem padrão | Decidida | 2026-11-18 | Decisão do dono |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |
