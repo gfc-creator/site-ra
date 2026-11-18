@@ -36,6 +36,6 @@ definitivo. Este documento registra o processo e recebe as decisões do dono.
 | --- | --- | --- |
 | Nome da marca | RA Tech Energia, sempre completo (D-20) | 2026-11-18 |
 | Conceito | Proposta do kit: monograma RA com feixe solar; ponto de partida do redesenho (D-11) | 2026-11-18 |
-| Logo | A definir | — |
+| Logo | Em aberto; opções guardadas em [`marca/opcoes-logo/`](marca/opcoes-logo/README.md) (D-21) | 2026-11-18 |
 | Cores | Proposta do kit: azul e âmbar; a aprovar | 2026-11-18 |
 | Tipografia | Proposta do kit: Inter; a aprovar | 2026-11-18 |

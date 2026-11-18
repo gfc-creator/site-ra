@@ -23,8 +23,9 @@ Criar a **identidade visual** e o **site** da RA Tech Energia.
 
 ## Estado atual
 
-Fase 1, identidade visual: o dono escolhe um dos 3 caminhos de conceito para o logo.
-Antes de registrar domínio e marca, avaliar o risco de `docs/hospedagem-e-dominio.md` §3.
+Logo em aberto, com opções guardadas em `docs/marca/opcoes-logo/` (D-21). Próxima etapa:
+base do site, com o nome em texto. Antes de registrar domínio e marca, avaliar o risco de
+`docs/hospedagem-e-dominio.md` §3.
 
 ## Convenções de trabalho
 
