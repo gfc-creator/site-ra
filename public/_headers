@@ -1,0 +1,5 @@
+# Ambiente de testes: fora da busca até o lançamento.
+/*
+  X-Robots-Tag: noindex
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

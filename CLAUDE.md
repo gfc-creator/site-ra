@@ -23,9 +23,11 @@ Criar a **identidade visual** e o **site** da RA Tech Energia.
 
 ## Estado atual
 
-Logo em aberto, com opções guardadas em `docs/marca/opcoes-logo/` (D-21). Próxima etapa:
-base do site, com o nome em texto. Antes de registrar domínio e marca, avaliar o risco de
-`docs/hospedagem-e-dominio.md` §3.
+Base do site pronta, com o nome em texto; logo em aberto, com opções em
+`docs/marca/opcoes-logo/` (D-21). Próxima etapa: publicar o site de testes na Cloudflare.
+Antes de registrar domínio e marca, avaliar o risco de `docs/hospedagem-e-dominio.md` §3.
+
+Comandos: `npm run dev`, `npm run check`, `npm run format:check` e `npm test`.
 
 ## Convenções de trabalho
 

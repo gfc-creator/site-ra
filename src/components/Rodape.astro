@@ -1,0 +1,24 @@
+---
+import { empresa } from "../lib/empresa";
+import SimboloAcessibilidade from "./SimboloAcessibilidade.astro";
+---
+
+<footer class="bg-azul-950 py-12 text-sm text-azul-100">
+  <div class="contido grid gap-8 md:grid-cols-[1fr_auto]">
+    <div class="grid gap-1">
+      <p class="font-titulo text-lg font-extrabold text-neutro-0">{empresa.marca}</p>
+      <p>{empresa.razaoSocial}</p>
+      <p>
+        CNPJ {empresa.cnpj} · {empresa.cidade}
+      </p>
+      <p>WhatsApp {empresa.telefone}</p>
+    </div>
+    <nav aria-label="Institucional" class="grid content-start gap-2">
+      <a href="/privacidade/">Política de privacidade</a>
+      <a href="/acessibilidade/" class="inline-flex items-center gap-2">
+        <SimboloAcessibilidade class="size-7" />
+        Acessibilidade
+      </a>
+    </nav>
+  </div>
+</footer>

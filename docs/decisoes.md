@@ -26,4 +26,6 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-19 | Registrar o domínio só depois de resolver o risco da marca | Proposta | 2026-11-18 | `hospedagem-e-dominio.md` §3 |
 | D-20 | Nome sempre completo: **RA Tech Energia** (revê D-14) | Decidida | 2026-11-18 | Resposta do dono à P14; reduz o risco apontado em `hospedagem-e-dominio.md` §3 |
 | D-21 | Guardar as 3 opções de logo sem aprovar nenhuma; até a escolha, o site mostra o nome em texto | Decidida | 2026-11-18 | Dono achou as opções simples e pediu para seguir |
+| D-22 | Premissas do simulador: tarifa de R$ 1/kWh, 125 kWh por mês por kWp e economia de 60% a 80% da conta | Proposta | 2026-11-18 | Valores de referência a validar pelo dono |
+| D-23 | Cores iniciais em azul e âmbar; títulos em Manrope e textos em IBM Plex Sans | Proposta | 2026-11-18 | Ponto de partida; pode mudar com o logo |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |

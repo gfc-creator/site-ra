@@ -1,0 +1,123 @@
+---
+import Base from "../layouts/Base.astro";
+import PainelCircuito from "../components/PainelCircuito.astro";
+import Simulador from "../components/Simulador.astro";
+import { empresa } from "../lib/empresa";
+
+const frentes = [
+  {
+    titulo: "TI, Cloud e Digitalização",
+    texto: "Infraestrutura de tecnologia com disponibilidade, segurança e automação.",
+    itens: [
+      "Migração e gestão de ambientes em nuvem",
+      "Digitalização de documentos e processos",
+      "Redes corporativas, backup e governança de TI",
+      "Aplicações web e integração de sistemas",
+    ],
+    fundo: "bg-azul-100",
+  },
+  {
+    titulo: "Energia Solar Fotovoltaica",
+    texto: "Geração própria de energia para empresas, propriedades rurais e residências.",
+    itens: [
+      "Dimensionamento e homologação na concessionária",
+      "Sistemas conectados à rede e híbridos",
+      "Monitoramento remoto da geração",
+      "Manutenção preventiva e limpeza técnica",
+    ],
+    fundo: "bg-ambar-100",
+  },
+];
+
+const etapas = [
+  ["Diagnóstico", "Entendemos seu consumo, sua estrutura e o resultado esperado."],
+  ["Projeto", "Definimos a solução, o cronograma e o investimento."],
+  ["Implantação", "Executamos com acompanhamento em cada fase."],
+  ["Acompanhamento", "Monitoramos o funcionamento depois da entrega."],
+];
+---
+
+<Base descricao="Soluções em TI, Cloud, digitalização e energia solar fotovoltaica para empresas, propriedades rurais e residências.">
+  <section class="overflow-hidden bg-azul-950 text-neutro-0">
+    <div class="contido grid items-center gap-10 py-14 md:grid-cols-[7fr_5fr] md:py-24">
+      <div class="grid justify-items-start gap-6">
+        <p class="font-semibold text-ambar-500">Tecnologia e energia solar</p>
+        <h1 class="text-4xl md:text-6xl">
+          Infraestrutura digital e eficiência energética para o seu negócio
+        </h1>
+        <p class="max-w-[58ch] text-lg text-azul-100">
+          Unimos nuvem, digitalização de processos e energia solar fotovoltaica para reduzir custos
+          e dar mais segurança à sua operação.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#simulador" class="botao botao-sol">
+            Simular economia
+          </a>
+          <a href="#solucoes" class="botao botao-contorno">
+            Conhecer soluções
+          </a>
+        </div>
+      </div>
+      <PainelCircuito />
+    </div>
+  </section>
+
+  <section id="solucoes" class="py-16 md:py-24" aria-labelledby="titulo-solucoes">
+    <div class="contido grid gap-10">
+      <h2 id="titulo-solucoes" class="max-w-[22ch] text-3xl md:text-4xl">
+        Duas frentes, um único parceiro técnico
+      </h2>
+      <div class="grid gap-5 md:grid-cols-2">
+        {frentes.map((f) => (
+          <article class:list={["grid content-start gap-4 rounded-md p-6 md:p-8", f.fundo]}>
+            <h3 class="text-2xl">{f.titulo}</h3>
+            <p>{f.texto}</p>
+            <ul class="grid list-disc gap-2 pl-5">
+              {f.itens.map((i) => (
+                <li>{i}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="como-trabalhamos"
+    class="border-t border-neutro-200 py-16 md:py-24"
+    aria-labelledby="titulo-etapas"
+  >
+    <div class="contido grid gap-10">
+      <h2 id="titulo-etapas" class="text-3xl md:text-4xl">
+        Como trabalhamos
+      </h2>
+      <ol class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {etapas.map(([titulo, texto], i) => (
+          <li class="grid content-start gap-2 border-t-4 border-azul-700 pt-4">
+            <span class="font-titulo text-sm font-extrabold text-azul-700">Etapa {i + 1}</span>
+            <h3 class="text-xl">{titulo}</h3>
+            <p class="text-neutro-600">{texto}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <Simulador />
+
+  <section id="contato" class="py-16 md:py-24" aria-labelledby="titulo-contato">
+    <div class="contido grid justify-items-start gap-5">
+      <h2 id="titulo-contato" class="max-w-[24ch] text-3xl md:text-4xl">
+        Fale com a RA Tech Energia sobre o seu projeto
+      </h2>
+      <p class="max-w-[58ch] text-neutro-600">
+        Conte o que você precisa em TI, nuvem ou energia solar. O atendimento é pelo WhatsApp{" "}
+        {empresa.telefone}.
+      </p>
+      <a href={empresa.whatsapp} class="botao botao-whatsapp" rel="noopener">
+        Iniciar conversa no WhatsApp
+      </a>
+    </div>
+  </section>
+</Base>
