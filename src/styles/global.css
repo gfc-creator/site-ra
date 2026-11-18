@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@theme inline {
+  --font-titulo: var(--fonte-titulo);
+  --font-texto: var(--fonte-texto);
+  --color-azul-950: var(--cor-azul-950);
+  --color-azul-900: var(--cor-azul-900);
+  --color-azul-700: var(--cor-azul-700);
+  --color-azul-300: var(--cor-azul-300);
+  --color-azul-100: var(--cor-azul-100);
+  --color-ambar-500: var(--cor-ambar-500);
+  --color-ambar-800: var(--cor-ambar-800);
+  --color-ambar-100: var(--cor-ambar-100);
+  --color-verde-700: var(--cor-verde-700);
+  --color-neutro-0: var(--cor-neutro-0);
+  --color-neutro-50: var(--cor-neutro-50);
+  --color-neutro-200: var(--cor-neutro-200);
+  --color-neutro-600: var(--cor-neutro-600);
+  --color-neutro-900: var(--cor-neutro-900);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    background: var(--cor-neutro-0);
+    color: var(--cor-neutro-900);
+    font-family: var(--fonte-texto);
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 3px solid var(--cor-ambar-500);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}
+
+@layer components {
+  .contido {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  .botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+  }
+  .botao-sol {
+    background: var(--cor-ambar-500);
+    color: var(--cor-azul-950);
+  }
+  .botao-sol:hover {
+    background: var(--cor-ambar-100);
+  }
+  .botao-whatsapp {
+    background: var(--cor-verde-700);
+    color: var(--cor-neutro-0);
+  }
+  .botao-whatsapp:hover {
+    background: var(--cor-azul-900);
+  }
+  .botao-contorno {
+    border: 1px solid var(--cor-azul-300);
+    color: var(--cor-neutro-0);
+  }
+  .botao-contorno:hover {
+    background: var(--cor-azul-900);
+  }
+}

@@ -1,0 +1,29 @@
+---
+// Ilustração do topo: as células de um painel solar viram os blocos de um circuito.
+const colunas = 7;
+const linhas = 6;
+const passo = 62;
+const acesas = new Set(["0-5", "1-4", "2-4", "2-3", "3-2", "4-2", "4-1", "5-0", "6-0"]);
+const celulas = Array.from({ length: colunas * linhas }, (_, i) => ({
+  c: i % colunas,
+  l: Math.floor(i / colunas),
+}));
+const trilha = "M31 353H93V291H217V229H279V167H341V105H403V43";
+---
+
+<svg viewBox="0 0 434 372" class="h-auto w-full" aria-hidden="true" focusable="false">
+  {celulas.map(({ c, l }) => (
+    <rect
+      x={c * passo + 4}
+      y={l * passo + 4}
+      width={passo - 8}
+      height={passo - 8}
+      rx="3"
+      fill={acesas.has(`${c}-${l}`) ? "var(--cor-ambar-500)" : "var(--cor-azul-900)"}
+      stroke={acesas.has(`${c}-${l}`) ? "none" : "var(--cor-azul-700)"}
+    />
+  ))}
+  <path d={trilha} fill="none" stroke="var(--cor-azul-950)" stroke-width="3"></path>
+  <circle cx="31" cy="353" r="7" fill="var(--cor-azul-950)"></circle>
+  <circle cx="403" cy="43" r="7" fill="var(--cor-azul-950)"></circle>
+</svg>

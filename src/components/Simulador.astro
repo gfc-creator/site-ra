@@ -1,0 +1,93 @@
+---
+import { empresa } from "../lib/empresa";
+import { estimar, kwp, premissas, reais } from "../lib/simulador";
+
+const inicial = 1500;
+const e = estimar(inicial);
+---
+
+<section id="simulador" class="bg-neutro-50 py-16 md:py-24" aria-labelledby="titulo-simulador">
+  <div class="contido grid gap-10 md:grid-cols-[5fr_7fr] md:items-start">
+    <div class="grid gap-4">
+      <h2 id="titulo-simulador" class="text-3xl md:text-4xl">
+        Quanto a energia solar pode reduzir sua conta?
+      </h2>
+      <p class="text-neutro-600">
+        Informe o valor médio da conta de luz e veja uma estimativa inicial. O valor real depende de
+        um estudo do seu imóvel.
+      </p>
+    </div>
+
+    <form
+      id="form-simulador"
+      class="grid gap-6 rounded-md border border-neutro-200 bg-neutro-0 p-5 md:p-8"
+    >
+      <div class="grid gap-3">
+        <label for="conta" class="font-semibold">
+          Conta de luz por mês
+        </label>
+        <output
+          id="conta-valor"
+          for="conta"
+          class="font-titulo text-3xl font-extrabold text-azul-700"
+        >
+          {reais(inicial)}
+        </output>
+        <input
+          id="conta"
+          name="conta"
+          type="range"
+          min="300"
+          max="15000"
+          step="100"
+          value={inicial}
+          class="h-11 w-full accent-azul-700"
+        />
+      </div>
+
+      <dl class="grid gap-4 border-t border-neutro-200 pt-6 sm:grid-cols-2" aria-live="polite">
+        <div>
+          <dt class="text-sm text-neutro-600">Economia estimada por ano</dt>
+          <dd id="economia" class="font-titulo text-xl font-extrabold">
+            {reais(e.economiaAnualMinima)} a {reais(e.economiaAnualMaxima)}
+          </dd>
+        </div>
+        <div>
+          <dt class="text-sm text-neutro-600">Potência aproximada do sistema</dt>
+          <dd id="potencia" class="font-titulo text-xl font-extrabold">
+            {kwp(e.potenciaKwp)}
+          </dd>
+        </div>
+      </dl>
+
+      <p class="text-sm text-neutro-600">
+        Estimativa sem valor de proposta. Considera tarifa de {reais(premissas.tarifaPorKwh)} por
+        kWh, geração de {premissas.geracaoMensalPorKwp} kWh por mês para cada kWp e economia de{" "}
+        {premissas.economiaMinima * 100}% a {premissas.economiaMaxima * 100}% da conta. A economia
+        varia com a concessionária, o local e as regras de compensação de energia.
+      </p>
+
+      <a href={empresa.whatsapp} class="botao botao-whatsapp" rel="noopener">
+        Pedir um estudo pelo WhatsApp
+      </a>
+    </form>
+  </div>
+</section>
+
+<script>
+  import { estimar, kwp, reais } from "../lib/simulador";
+
+  const conta = document.querySelector<HTMLInputElement>("#conta");
+  const valor = document.querySelector("#conta-valor");
+  const economia = document.querySelector("#economia");
+  const potencia = document.querySelector("#potencia");
+
+  conta?.addEventListener("input", () => {
+    const mensal = Number(conta.value);
+    const e = estimar(mensal);
+    if (valor) valor.textContent = reais(mensal);
+    if (economia)
+      economia.textContent = `${reais(e.economiaAnualMinima)} a ${reais(e.economiaAnualMaxima)}`;
+    if (potencia) potencia.textContent = kwp(e.potenciaKwp);
+  });
+</script>

@@ -47,6 +47,11 @@ Esta é uma **recomendação para um site institucional de conteúdo**. Loja, lo
 - **Acessibilidade automática não basta.** O axe encontra só parte dos problemas; o
   teste com teclado e leitor de tela continua manual.
 
+- **Alerta de segurança em ferramenta de desenvolvimento (2026-11-18):** `npm audit` aponta o
+  `picomatch` (GHSA-fc5q-39xc-vjpf), usado por Vite e Astro na compilação. Ainda não há versão
+  corrigida. O pacote não vai para o site publicado, que é só HTML, CSS e JavaScript próprio.
+  Reconferir a cada atualização.
+
 ## 3. Alternativas avaliadas
 
 | Alternativa | Versão | Quando escolher |

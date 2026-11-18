@@ -2,7 +2,7 @@
 
 Identidade visual e site da **RA Tech Energia**.
 
-Projeto em fase de definição: ainda não há código. Comece por:
+Site em construção, com Astro, Tailwind CSS e tokens de marca. Comece por:
 
 | Documento | Para quê |
 | --- | --- |
@@ -16,3 +16,19 @@ Projeto em fase de definição: ainda não há código. Comece por:
 | [`docs/decisoes.md`](docs/decisoes.md) | Registro das decisões |
 | [`docs/identidade-visual.md`](docs/identidade-visual.md) | Processo e entregas da marca |
 | [`docs/roadmap.md`](docs/roadmap.md) | Fases do projeto |
+
+## Rodar o site
+
+Requer Node.js 24 (`.nvmrc`).
+
+```bash
+npm ci
+npm run dev            # site local em http://localhost:4321
+npm run check          # verificação de tipos e modelos
+npm run format:check   # padrão de código
+npm test               # navegação, acessibilidade e celular
+npm run tokens         # gera src/styles/tokens.css a partir de tokens/marca.tokens.json
+```
+
+Cores da marca: altere `tokens/marca.tokens.json` e rode `npm run tokens`. Dados da empresa
+ficam em `src/lib/empresa.ts`, e as premissas do simulador em `src/lib/simulador.ts`.

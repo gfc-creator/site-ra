@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import { empresa } from "../lib/empresa";
+---
+
+<Base
+  titulo="Política de privacidade"
+  descricao="Como o site da RA Tech Energia trata dados pessoais."
+>
+  <article class="contido grid max-w-3xl gap-5 py-14">
+    <h1 class="text-4xl">Política de privacidade</h1>
+    <p>
+      Este site é mantido por {empresa.razaoSocial}, CNPJ {empresa.cnpj}, que usa a marca{" "}
+      {empresa.marca}.
+    </p>
+    <h2 class="text-2xl">Dados coletados</h2>
+    <p>
+      O site não tem cadastro nem formulário e não usa cookies. O valor informado no simulador é
+      calculado no seu próprio aparelho e não é enviado para nós.
+    </p>
+    <h2 class="text-2xl">Contato pelo WhatsApp</h2>
+    <p>
+      Ao clicar nos botões de WhatsApp, você sai deste site. As informações que enviar na conversa
+      são usadas para responder ao seu pedido, e o uso do aplicativo segue as regras do WhatsApp.
+    </p>
+    <h2 class="text-2xl">Seus direitos</h2>
+    <p>
+      Para pedir acesso, correção ou exclusão de dados pessoais, fale conosco pelo WhatsApp{" "}
+      {empresa.telefone}.
+    </p>
+  </article>
+</Base>

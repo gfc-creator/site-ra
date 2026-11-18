@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import SimboloAcessibilidade from "../components/SimboloAcessibilidade.astro";
+import { empresa } from "../lib/empresa";
+---
+
+<Base titulo="Acessibilidade" descricao="Recursos de acessibilidade do site da RA Tech Energia.">
+  <article class="contido grid max-w-3xl gap-5 py-14">
+    <SimboloAcessibilidade class="size-16 text-azul-700" />
+    <h1 class="text-4xl">Acessibilidade</h1>
+    <p>
+      Este site foi construído para ser usado por todas as pessoas, seguindo as WCAG 2.2, nível AA.
+    </p>
+    <ul class="grid list-disc gap-2 pl-5">
+      <li>Navegação completa pelo teclado, com o foco sempre visível</li>
+      <li>Atalho para ir direto ao conteúdo</li>
+      <li>Estrutura compatível com leitores de tela</li>
+      <li>Cores com contraste adequado e texto que pode ser ampliado</li>
+      <li>Animações reduzidas para quem configurou essa preferência no aparelho</li>
+    </ul>
+    <p>Encontrou alguma barreira? Avise pelo WhatsApp {empresa.telefone}.</p>
+  </article>
+</Base>

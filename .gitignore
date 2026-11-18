@@ -3,3 +3,9 @@ RA-Tech-Energia-Kit-Completo.zip
 docs/*.pdf
 # Referências de trabalho do dono.
 tmp/
+node_modules/
+dist/
+.astro/
+.wrangler/
+test-results/
+playwright-report/
