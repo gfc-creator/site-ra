@@ -35,7 +35,7 @@ definitivo. Este documento registra o processo e recebe as decisões do dono.
 | Item | Decisão | Data |
 | --- | --- | --- |
 | Nome da marca | RA Tech Energia, sempre completo (D-20) | 2026-11-18 |
-| Conceito | Proposta do kit: monograma RA com feixe solar; ponto de partida do redesenho (D-11) | 2026-11-18 |
-| Logo | Em aberto; opções guardadas em [`marca/opcoes-logo/`](marca/opcoes-logo/README.md) (D-21) | 2026-11-18 |
-| Cores | Proposta do kit: azul e âmbar; a aprovar | 2026-11-18 |
+| Conceito | Células solares em torno de um núcleo de energia | 2026-11-18 |
+| Logo | **Núcleo de energia** (D-27); arquivos e regras em [`marca/README.md`](marca/README.md) | 2026-11-18 |
+| Cores | Azul e âmbar | 2026-11-18 |
 | Tipografia | Proposta do kit: Inter; a aprovar | 2026-11-18 |

@@ -16,6 +16,7 @@ Site em construção, com Astro, Tailwind CSS e tokens de marca. Comece por:
 | [`docs/requisitos.md`](docs/requisitos.md) | Requisitos numerados |
 | [`docs/tecnologias.md`](docs/tecnologias.md) | Levantamento das tecnologias, com versões e fontes |
 | [`docs/decisoes.md`](docs/decisoes.md) | Registro das decisões |
+| [`docs/marca/README.md`](docs/marca/README.md) | Logo, arquivos e regras de uso |
 | [`docs/identidade-visual.md`](docs/identidade-visual.md) | Processo e entregas da marca |
 | [`docs/roadmap.md`](docs/roadmap.md) | Fases do projeto |
 

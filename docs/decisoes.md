@@ -31,4 +31,5 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-23 | Cores iniciais em azul e âmbar; títulos em Manrope e textos em IBM Plex Sans | Proposta | 2026-11-18 | Ponto de partida; pode mudar com o logo |
 | D-24 | Parceiros e clientes como vitrine pública, sem login | Decidida | 2026-11-18 | Dono escolheu a opção A; `vitrine.md` |
 | D-25 | Publicar parceiros e clientes sem registro de autorização; quem não tem logo usa a imagem padrão | Decidida | 2026-11-18 | Decisão do dono |
+| D-27 | Logo **Núcleo de energia** (revê D-21) | Decidida | 2026-11-18 | Escolha do dono na segunda rodada; `marca/README.md` |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |
