@@ -1,0 +1,5 @@
+RA-Tech-Energia-Kit-Completo.zip
+# Documentos da empresa têm dados pessoais: nunca entram no repositório público.
+docs/*.pdf
+# Referências de trabalho do dono.
+tmp/
