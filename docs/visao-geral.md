@@ -21,10 +21,11 @@ estão em [`empresa.md`](empresa.md).
 | P4 | Quais páginas são necessárias? Haverá blog, notícias, loja ou área de cliente? | Arquitetura; loja ou login mudam a pilha | Pendente |
 | P5 | Quem vai atualizar o conteúdo depois de pronto, e com que frequência? | Painel de edição ou edição pelo repositório | Pendente |
 | P6 | O contato será só por WhatsApp? | Formulário exige envio de e-mail e tratamento de dados | Kit indica WhatsApp; falta confirmar |
-| P7 | O domínio `ratechenergia.com.br` já está registrado? | Publicação e e-mail | **Respondida:** nenhum domínio registrado (2026-11-18); registrar depois de definir a marca |
+| P7 | Qual domínio registrar? | Publicação e e-mail | Nenhum registrado; opções em `hospedagem-e-dominio.md` §2 |
+| P14 | Mantém RA Tech mesmo com a marca RA TECHNOLOGICS registrada? | Logo, domínio e risco jurídico | **Respondida:** o nome será sempre completo, RA Tech Energia (2026-11-18) |
 | P8 | O site será só em português? | Estrutura de idiomas | Pendente |
 | P9 | Há prazo e limite de custo mensal? | Escolha de serviços pagos | Pendente |
-| P10 | Quem executa os serviços de engenharia solar? | O que o site pode prometer | **Respondida:** empresas contratadas; o site não exibe dados de CREA (2026-11-18) |
+| P10 | O site trata de CREA ou de quem executa a engenharia? | O que o site informa | **Respondida:** não (2026-11-18) |
 | P11 | O simulador solar deve continuar? | Risco de promessa sem base | **Respondida:** sim, em versão simples e como estimativa (2026-11-18) |
 | P12 | O site trata só de TI/Cloud e energia solar, ou também das outras atividades da empresa? | Escopo e páginas | **Respondida:** só as duas frentes (2026-11-18) |
 | P13 | Qual custo por kWp a empresa usa, para o simulador? | Cálculo de retorno | **Respondida:** não entra; o simulador não calcula retorno (2026-11-18) |

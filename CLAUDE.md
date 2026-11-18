@@ -5,7 +5,7 @@ Claude Code em toda sessão nesta pasta. O detalhe fica em `docs/`; não duplica
 
 ## Objetivo
 
-Criar a **identidade visual** e o **site** da RA Tech.
+Criar a **identidade visual** e o **site** da RA Tech Energia.
 
 ## Parâmetros
 
@@ -16,15 +16,16 @@ Criar a **identidade visual** e o **site** da RA Tech.
 | Tecnologias | Atuais e estáveis | Definido pelo dono (2026-11-18) |
 | Documentação | Desde o início, como no projeto Porteira | Definido pelo dono (2026-11-18) |
 | Empresa | AF Carneiro Engenharia e Empreendimentos Sustentáveis Ltda | `docs/empresa.md` |
-| Marca do site | **RA Tech**, com o complemento "& Energia" | Definido pelo dono (2026-11-18) |
+| Marca do site | **RA Tech Energia**, sempre com o nome completo | Definido pelo dono (2026-11-18) |
 | Frentes do site | TI/Cloud e energia solar | Definido pelo dono (2026-11-18) |
 | Páginas, idioma e domínio | **A definir**; nenhum domínio registrado | `docs/visao-geral.md` §3 |
 | Pilha técnica | Aprovada como referência inicial | `docs/decisoes.md` |
 
 ## Estado atual
 
-Fase 0 concluída com o merge do PR #1. Próxima etapa: Fase 1, identidade visual,
-começando por até 3 caminhos de conceito para o logo.
+Logo em aberto, com opções guardadas em `docs/marca/opcoes-logo/` (D-21). Próxima etapa:
+base do site, com o nome em texto. Antes de registrar domínio e marca, avaliar o risco de
+`docs/hospedagem-e-dominio.md` §3.
 
 ## Convenções de trabalho
 
