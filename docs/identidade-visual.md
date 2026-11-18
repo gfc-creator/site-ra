@@ -1,0 +1,39 @@
+# Identidade visual
+
+Nenhum elemento da marca foi definido. Este documento registra o processo e recebe
+as decisões à medida que forem aprovadas pelo dono.
+
+## 1. Etapas
+
+| # | Etapa | Resultado | Aprovação do dono |
+| --- | --- | --- | --- |
+| 1 | Briefing | Respostas de `visao-geral.md` §3: atividade, público, referências | Sim |
+| 2 | Pesquisa | Como concorrentes e o setor se apresentam | Não |
+| 3 | Conceito | Personalidade e direção visual, em até 3 caminhos | Sim |
+| 4 | Logo | Versões principal, horizontal, reduzida e monocromática | Sim |
+| 5 | Sistema visual | Cores, tipografia, ícones e estilo de imagem | Sim |
+| 6 | Tokens | Cores, fontes e espaçamentos no formato DTCG | Não |
+| 7 | Manual da marca | Regras de uso e arquivos finais | Sim |
+
+## 2. Entregas
+
+- Logo em SVG, PNG e PDF, com versões para fundo claro e escuro
+- Paleta com contraste conferido (WCAG 2.2 AA)
+- Tipografia com licença de uso confirmada
+- Favicon e ícones para celular
+- Tokens de design para o site
+- Manual da marca
+
+## 3. Cuidados
+
+- Antes de fechar nome e logo, consultar a base do INPI para evitar conflito de marca.
+- Registrar a licença de toda fonte, imagem e ícone de terceiros.
+
+## 4. Decisões da marca
+
+| Item | Decisão | Data |
+| --- | --- | --- |
+| Conceito | A definir | — |
+| Logo | A definir | — |
+| Cores | A definir | — |
+| Tipografia | A definir | — |
