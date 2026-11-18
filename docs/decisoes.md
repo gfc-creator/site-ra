@@ -15,4 +15,7 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-07 | Conteúdo em Markdown, sem painel, até P5 ser respondida | Proposta | 2026-11-18 | Menor custo e menor complexidade |
 | D-08 | Métricas sem cookies (Cloudflare Web Analytics) | Proposta | 2026-11-18 | Dispensa banner de consentimento para métricas |
 | D-10 | Usar o kit inicial como briefing e rascunho, sem publicá-lo como está | Proposta | 2026-11-18 | `analise-kit-inicial.md` §5 |
+| D-11 | Redesenhar o logo, partindo do conceito do kit | Decidida | 2026-11-18 | Resposta do dono à P3 |
+| D-12 | Manter o simulador solar, com premissas claras e como estimativa | Decidida | 2026-11-18 | Resposta do dono à P11 |
+| D-13 | Documentos da empresa ficam fora do repositório público | Decidida | 2026-11-18 | Contêm dados pessoais |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |

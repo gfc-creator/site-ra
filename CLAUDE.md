@@ -15,8 +15,9 @@ Criar a **identidade visual** e o **site** da RA.
 | Repositório | `gfc-creator/site-ra`, público | Definido pelo dono |
 | Tecnologias | Atuais e estáveis | Definido pelo dono (2026-11-18) |
 | Documentação | Desde o início, como no projeto Porteira | Definido pelo dono (2026-11-18) |
-| Nome, atividade e público | Indicados no kit (RA Tech & Energia), **a confirmar** | `docs/analise-kit-inicial.md` |
-| Páginas, idioma, domínio e registro no CREA | **A definir** | `docs/visao-geral.md` §3 |
+| Empresa | AF Carneiro Engenharia e Empreendimentos Sustentáveis Ltda | `docs/empresa.md` |
+| Marca do site | RA Tech & Energia, indicada no kit, **a confirmar** | `docs/visao-geral.md` P1 |
+| Páginas, idioma e domínio | **A definir** | `docs/visao-geral.md` §3 |
 | Pilha técnica | **Proposta, aguarda aprovação** | `docs/decisoes.md` |
 
 ## Estado atual
@@ -40,6 +41,7 @@ revisa e faz o merge pessoalmente.
   **premissa a validar**. Sugestão não vira requisito nem pendência sem o "sim" do dono.
 - Versões e afirmações técnicas são conferidas na fonte oficial, com data.
 - O repositório é público: nada de senha, chave, e-mail pessoal ou dado de cliente.
+  **Os PDFs da empresa em `docs/` têm dados pessoais e nunca entram no git.**
 - Textos em português, na norma culta.
 
 ## Critérios que atravessam o projeto
