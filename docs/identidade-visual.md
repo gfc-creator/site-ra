@@ -1,7 +1,8 @@
 # Identidade visual
 
-Nenhum elemento da marca foi definido. Este documento registra o processo e recebe
-as decisões à medida que forem aprovadas pelo dono.
+Há uma proposta inicial no kit do dono, analisada em
+[`analise-kit-inicial.md`](analise-kit-inicial.md). Nenhum elemento está aprovado como
+definitivo. Este documento registra o processo e recebe as decisões do dono.
 
 ## 1. Etapas
 
@@ -33,7 +34,7 @@ as decisões à medida que forem aprovadas pelo dono.
 
 | Item | Decisão | Data |
 | --- | --- | --- |
-| Conceito | A definir | — |
+| Conceito | Proposta do kit: monograma RA com feixe solar; a aprovar | 2026-11-18 |
 | Logo | A definir | — |
-| Cores | A definir | — |
-| Tipografia | A definir | — |
+| Cores | Proposta do kit: azul e âmbar; a aprovar | 2026-11-18 |
+| Tipografia | Proposta do kit: Inter; a aprovar | 2026-11-18 |

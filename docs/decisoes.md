@@ -14,4 +14,5 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-06 | Node.js 24 LTS e TypeScript 6 | Proposta | 2026-11-18 | Compatibilidade conferida em `tecnologias.md` §2 |
 | D-07 | Conteúdo em Markdown, sem painel, até P5 ser respondida | Proposta | 2026-11-18 | Menor custo e menor complexidade |
 | D-08 | Métricas sem cookies (Cloudflare Web Analytics) | Proposta | 2026-11-18 | Dispensa banner de consentimento para métricas |
+| D-10 | Usar o kit inicial como briefing e rascunho, sem publicá-lo como está | Proposta | 2026-11-18 | `analise-kit-inicial.md` §5 |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |
