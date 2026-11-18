@@ -31,14 +31,17 @@ test("o rodapé identifica a empresa", async ({ page }) => {
   await expect(rodape.getByRole("img", { name: "Símbolo de acessibilidade" })).toBeVisible();
 });
 
-test("o simulador recalcula a estimativa", async ({ page }) => {
+test("o simulador recalcula a estimativa pela ligação", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator("#economia")).toHaveText(/R\$\s10\.800 a R\$\s14\.400/);
-  await expect(page.locator("#potencia")).toHaveText("12,0 kWp");
-  await page.locator("#conta").fill("3000");
-  await expect(page.locator("#conta-valor")).toHaveText(/R\$\s3\.000/);
-  await expect(page.locator("#economia")).toHaveText(/R\$\s21\.600 a R\$\s28\.800/);
-  await expect(page.locator("#potencia")).toHaveText("24,0 kWp");
+  await expect(page.locator("#conta-depois")).toHaveText(/R\$\s276/);
+  await expect(page.locator("#economia")).toHaveText(/R\$\s14\.685/);
+  await expect(page.locator("#potencia")).toHaveText("9,7 kWp");
+  await page.locator("#conta").fill("300");
+  await page.locator("#ligacao").selectOption("trifasica");
+  await expect(page.locator("#conta-valor")).toHaveText(/R\$\s300/);
+  await expect(page.locator("#conta-depois")).toHaveText(/R\$\s123/);
+  await expect(page.locator("#economia")).toHaveText(/R\$\s2\.119/);
+  await expect(page.locator("#potencia")).toHaveText("1,2 kWp");
 });
 
 test("os botões de contato levam ao WhatsApp da empresa", async ({ page }) => {

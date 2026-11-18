@@ -23,10 +23,11 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-16 | Simulador simples: potência e economia aproximadas, sem custo por kWp nem retorno do investimento | Decidida | 2026-11-18 | Resposta do dono à P13 |
 | D-17 | O site não trata de CREA nem de quem executa os serviços de engenharia | Decidida | 2026-11-18 | Resposta do dono à P10 |
 | D-18 | Testes na Cloudflare Workers, em endereço `workers.dev` | Proposta | 2026-11-18 | `hospedagem-e-dominio.md` §1 |
-| D-19 | Registrar o domínio só depois de resolver o risco da marca | Proposta | 2026-11-18 | `hospedagem-e-dominio.md` §3 |
+| D-19 | Registrar `ratechenergia.com.br` no Registro.br | Decidida | 2026-11-18 | Pedido do dono: melhor custo-benefício; `hospedagem-e-dominio.md` §2 |
 | D-20 | Nome sempre completo: **RA Tech Energia** (revê D-14) | Decidida | 2026-11-18 | Resposta do dono à P14; reduz o risco apontado em `hospedagem-e-dominio.md` §3 |
 | D-21 | Guardar as 3 opções de logo sem aprovar nenhuma; até a escolha, o site mostra o nome em texto | Decidida | 2026-11-18 | Dono achou as opções simples e pediu para seguir |
-| D-22 | Premissas do simulador: tarifa de R$ 1/kWh, 125 kWh por mês por kWp e economia de 60% a 80% da conta | Proposta | 2026-11-18 | Valores de referência a validar pelo dono |
+| D-22 | Simulador segue a tarifa e as regras da Equatorial Maranhão | Decidida | 2026-11-18 | Pedido do dono; `simulador.md` |
+| D-26 | Serviços do site limitados às atividades registradas no CNPJ | Decidida | 2026-11-18 | Pedido do dono; `empresa.md` |
 | D-23 | Cores iniciais em azul e âmbar; títulos em Manrope e textos em IBM Plex Sans | Proposta | 2026-11-18 | Ponto de partida; pode mudar com o logo |
 | D-24 | Parceiros e clientes como vitrine pública, sem login | Decidida | 2026-11-18 | Dono escolheu a opção A; `vitrine.md` |
 | D-25 | Publicar parceiros e clientes sem registro de autorização; quem não tem logo usa a imagem padrão | Decidida | 2026-11-18 | Decisão do dono |

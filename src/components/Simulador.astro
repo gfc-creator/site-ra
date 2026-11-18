@@ -1,9 +1,11 @@
 ---
 import { empresa } from "../lib/empresa";
-import { estimar, kwp, premissas, reais } from "../lib/simulador";
+import { estimar, kwp, ligacoes, premissas, reais, tarifaComTributos } from "../lib/simulador";
 
 const inicial = 1500;
-const e = estimar(inicial);
+const ligacaoInicial = "bifasica";
+const e = estimar(inicial, ligacaoInicial);
+const porcentagem = (valor: number) => `${Math.round(valor * 100)}%`;
 ---
 
 <section id="simulador" class="bg-neutro-50 py-16 md:py-24" aria-labelledby="titulo-simulador">
@@ -13,8 +15,8 @@ const e = estimar(inicial);
         Quanto a energia solar pode reduzir sua conta?
       </h2>
       <p class="text-neutro-600">
-        Informe o valor médio da conta de luz e veja uma estimativa inicial. O valor real depende de
-        um estudo do seu imóvel.
+        Estimativa para clientes de baixa tensão da Equatorial Maranhão, com a tarifa vigente e as
+        regras da geração distribuída. O valor real depende de um estudo do seu imóvel.
       </p>
     </div>
 
@@ -45,26 +47,72 @@ const e = estimar(inicial);
         />
       </div>
 
-      <dl class="grid gap-4 border-t border-neutro-200 pt-6 sm:grid-cols-2" aria-live="polite">
+      <div class="grid gap-2">
+        <label for="ligacao" class="font-semibold">
+          Tipo de ligação
+        </label>
+        <select
+          id="ligacao"
+          name="ligacao"
+          class="min-h-11 rounded border border-neutro-600 bg-neutro-0 px-3"
+        >
+          {Object.entries(ligacoes).map(([valor, { rotulo }]) => (
+            <option value={valor} selected={valor === ligacaoInicial}>
+              {rotulo}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <dl class="grid gap-4 border-t border-neutro-200 pt-6 sm:grid-cols-3" aria-live="polite">
         <div>
-          <dt class="text-sm text-neutro-600">Economia estimada por ano</dt>
-          <dd id="economia" class="font-titulo text-xl font-extrabold">
-            {reais(e.economiaAnualMinima)} a {reais(e.economiaAnualMaxima)}
+          <dt class="text-sm text-neutro-600">Conta estimada depois</dt>
+          <dd id="conta-depois" class="font-titulo text-xl font-extrabold">
+            {reais(e.contaDepois)}
           </dd>
         </div>
         <div>
-          <dt class="text-sm text-neutro-600">Potência aproximada do sistema</dt>
+          <dt class="text-sm text-neutro-600">Economia estimada por ano</dt>
+          <dd id="economia" class="font-titulo text-xl font-extrabold">
+            {reais(e.economiaAnual)}
+          </dd>
+        </div>
+        <div>
+          <dt class="text-sm text-neutro-600">Potência aproximada</dt>
           <dd id="potencia" class="font-titulo text-xl font-extrabold">
             {kwp(e.potenciaKwp)}
           </dd>
         </div>
       </dl>
 
+      <details class="text-sm text-neutro-600">
+        <summary class="min-h-11 cursor-pointer content-center font-semibold text-neutro-900">
+          Como calculamos
+        </summary>
+        <ul class="mt-2 grid list-disc gap-1 pl-5">
+          <li>
+            Tarifa da Equatorial Maranhão de {reais(tarifaComTributos, 2)} por kWh, com tributos
+            estimados em {porcentagem(premissas.tributos)} (ANEEL, Resolução Homologatória
+            3.604/2026).
+          </li>
+          <li>
+            Cobrança de {porcentagem(premissas.parcelaFioB)} do Fio B sobre a energia compensada,
+            regra de {premissas.anoDaRegra} da Lei 14.300/2022.
+          </li>
+          <li>
+            Conta mínima de 30, 50 ou 100 kWh, conforme a ligação ser monofásica, bifásica ou
+            trifásica.
+          </li>
+          <li>
+            Geração de {premissas.geracaoMensalPorKwp} kWh por mês para cada kWp e{" "}
+            {porcentagem(premissas.simultaneidade)} da energia usada no momento da geração.
+          </li>
+        </ul>
+      </details>
+
       <p class="text-sm text-neutro-600">
-        Estimativa sem valor de proposta. Considera tarifa de {reais(premissas.tarifaPorKwh)} por
-        kWh, geração de {premissas.geracaoMensalPorKwp} kWh por mês para cada kWp e economia de{" "}
-        {premissas.economiaMinima * 100}% a {premissas.economiaMaxima * 100}% da conta. A economia
-        varia com a concessionária, o local e as regras de compensação de energia.
+        Estimativa sem valor de proposta. Não inclui iluminação pública, bandeiras tarifárias nem
+        reajustes futuros.
       </p>
 
       <a href={empresa.whatsapp} class="botao botao-whatsapp" rel="noopener">
@@ -75,19 +123,28 @@ const e = estimar(inicial);
 </section>
 
 <script>
-  import { estimar, kwp, reais } from "../lib/simulador";
+  import { estimar, kwp, reais, type Ligacao } from "../lib/simulador";
 
   const conta = document.querySelector<HTMLInputElement>("#conta");
-  const valor = document.querySelector("#conta-valor");
-  const economia = document.querySelector("#economia");
-  const potencia = document.querySelector("#potencia");
+  const ligacao = document.querySelector<HTMLSelectElement>("#ligacao");
+  const campo = (id: string) => document.querySelector(id);
 
-  conta?.addEventListener("input", () => {
+  function atualizar() {
+    if (!conta || !ligacao) return;
     const mensal = Number(conta.value);
-    const e = estimar(mensal);
-    if (valor) valor.textContent = reais(mensal);
-    if (economia)
-      economia.textContent = `${reais(e.economiaAnualMinima)} a ${reais(e.economiaAnualMaxima)}`;
-    if (potencia) potencia.textContent = kwp(e.potenciaKwp);
-  });
+    const e = estimar(mensal, ligacao.value as Ligacao);
+    const textos = {
+      "#conta-valor": reais(mensal),
+      "#conta-depois": reais(e.contaDepois),
+      "#economia": reais(e.economiaAnual),
+      "#potencia": kwp(e.potenciaKwp),
+    };
+    Object.entries(textos).forEach(([id, texto]) => {
+      const elemento = campo(id);
+      if (elemento) elemento.textContent = texto;
+    });
+  }
+
+  conta?.addEventListener("input", atualizar);
+  ligacao?.addEventListener("change", atualizar);
 </script>
