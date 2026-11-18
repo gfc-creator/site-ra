@@ -1,17 +1,7 @@
-/**
- * Conteúdo da seção "Parceiros e clientes". Como preencher: docs/vitrine.md.
- *
- * Só aparece no site o que tiver `autorizadoEm`, a data em que a empresa ou a pessoa
- * autorizou a divulgação. Sem conteúdo autorizado, a seção fica oculta.
- */
-interface Autorizado {
-  /** Data da autorização, no formato AAAA-MM-DD. */
-  autorizadoEm: string;
-}
-
-export interface Marca extends Autorizado {
+/** Conteúdo da seção "Parceiros e clientes". Como preencher: docs/vitrine.md. */
+export interface Marca {
   nome: string;
-  /** Arquivo em public/vitrine/, por exemplo "/vitrine/empresa.svg". Sem logo, mostra o nome. */
+  /** Arquivo em public/vitrine/. Sem logo, aparece a imagem padrão. */
   logo?: string;
   /** Endereço completo do site, com https://. */
   site?: string;
@@ -19,14 +9,14 @@ export interface Marca extends Autorizado {
   atuacao?: string;
 }
 
-export interface Depoimento extends Autorizado {
+export interface Depoimento {
   texto: string;
   autor: string;
   cargo?: string;
   empresa?: string;
 }
 
-export interface Projeto extends Autorizado {
+export interface Projeto {
   titulo: string;
   frente: "TI e Cloud" | "Energia solar";
   descricao: string;
@@ -37,39 +27,42 @@ export interface Projeto extends Autorizado {
   fotoDescricao?: string;
 }
 
-/** Aguardando a data de autorização de cada um: sem ela, nada aparece no site. */
-const AGUARDANDO_AUTORIZACAO = "";
+export const imagemPadrao = {
+  cliente: "/vitrine/padrao-cliente.svg",
+  parceiro: "/vitrine/padrao-parceiro.svg",
+};
+
 const SOLAR = "Projeto de energia solar";
 
-export const parceiros: Marca[] = [
+const parceiros: Marca[] = [
   {
     nome: "Elétrica Futura",
+    logo: "/vitrine/parceiro-eletrica-futura.png",
     site: "https://www.eletricafutura.com.br/",
-    autorizadoEm: AGUARDANDO_AUTORIZACAO,
   },
-  { nome: "Sou Energy", site: "https://souenergy.com.br/", autorizadoEm: AGUARDANDO_AUTORIZACAO },
-  { nome: "Nexen", autorizadoEm: AGUARDANDO_AUTORIZACAO },
-  { nome: "Fotus", site: "https://fotus.com.br/", autorizadoEm: AGUARDANDO_AUTORIZACAO },
-  { nome: "BelEnergy", site: "https://belenergy.com.br/", autorizadoEm: AGUARDANDO_AUTORIZACAO },
+  {
+    nome: "Sou Energy",
+    logo: "/vitrine/parceiro-sou-energy.png",
+    site: "https://souenergy.com.br/",
+  },
+  { nome: "Nexen" },
+  { nome: "Fotus", logo: "/vitrine/parceiro-fotus.png", site: "https://fotus.com.br/" },
+  {
+    nome: "BelEnergy",
+    logo: "/vitrine/parceiro-belenergy.png",
+    site: "https://belenergy.com.br/",
+  },
 ];
 
-export const clientes: Marca[] = [
-  { nome: "Serra da Mangaba", atuacao: SOLAR, autorizadoEm: AGUARDANDO_AUTORIZACAO },
-  { nome: "Florida de Liz", atuacao: SOLAR, autorizadoEm: AGUARDANDO_AUTORIZACAO },
-  { nome: "Supermercado Miranda", atuacao: SOLAR, autorizadoEm: AGUARDANDO_AUTORIZACAO },
+const clientes: Marca[] = [
+  { nome: "Serra da Mangaba", atuacao: SOLAR },
+  { nome: "Florida de Liz", atuacao: SOLAR },
+  { nome: "Supermercado Miranda", atuacao: SOLAR },
 ];
 
-export const depoimentos: Depoimento[] = [];
-export const projetos: Projeto[] = [];
+const depoimentos: Depoimento[] = [];
+const projetos: Projeto[] = [];
 
-const autorizados = <T extends Autorizado>(itens: T[]) =>
-  itens.filter((item) => /^\d{4}-\d{2}-\d{2}$/.test(item.autorizadoEm));
-
-export const vitrine = {
-  parceiros: autorizados(parceiros),
-  clientes: autorizados(clientes),
-  depoimentos: autorizados(depoimentos),
-  projetos: autorizados(projetos),
-};
+export const vitrine = { parceiros, clientes, depoimentos, projetos };
 
 export const temVitrine = Object.values(vitrine).some((itens) => itens.length > 0);

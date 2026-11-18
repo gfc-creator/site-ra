@@ -1,6 +1,6 @@
 ---
 import GradeMarcas from "./GradeMarcas.astro";
-import { temVitrine, vitrine } from "../lib/vitrine";
+import { imagemPadrao, temVitrine, vitrine } from "../lib/vitrine";
 
 const { parceiros, clientes, depoimentos, projetos } = vitrine;
 ---
@@ -16,8 +16,12 @@ const { parceiros, clientes, depoimentos, projetos } = vitrine;
         Parceiros e clientes
       </h2>
 
-      {clientes.length > 0 && <GradeMarcas titulo="Clientes" marcas={clientes} />}
-      {parceiros.length > 0 && <GradeMarcas titulo="Parceiros" marcas={parceiros} />}
+      {clientes.length > 0 && (
+        <GradeMarcas titulo="Clientes" marcas={clientes} imagemPadrao={imagemPadrao.cliente} />
+      )}
+      {parceiros.length > 0 && (
+        <GradeMarcas titulo="Parceiros" marcas={parceiros} imagemPadrao={imagemPadrao.parceiro} />
+      )}
 
       {projetos.length > 0 && (
         <div class="grid gap-4">
