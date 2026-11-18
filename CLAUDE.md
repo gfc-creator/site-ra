@@ -23,8 +23,8 @@ Criar a **identidade visual** e o **site** da RA Tech.
 
 ## Estado atual
 
-Fase 0 concluída com o merge do PR #1. Próxima etapa: Fase 1, identidade visual,
-começando por até 3 caminhos de conceito para o logo.
+Fase 0 concluída. Antes da Fase 1 (identidade visual), o dono decide o risco da marca:
+ver `docs/hospedagem-e-dominio.md` §3 e a pergunta P14.
 
 ## Convenções de trabalho
 

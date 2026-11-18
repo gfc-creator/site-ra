@@ -21,5 +21,7 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-14 | Marca **RA Tech**, com o complemento "& Energia" | Decidida | 2026-11-18 | Resposta do dono à P1 |
 | D-15 | Site só com as frentes TI/Cloud e energia solar | Decidida | 2026-11-18 | Resposta do dono à P12 |
 | D-16 | Simulador simples: potência e economia aproximadas, sem custo por kWp nem retorno do investimento | Decidida | 2026-11-18 | Resposta do dono à P13 |
-| D-17 | Serviços de engenharia executados por empresas contratadas; o site não exibe dados de CREA | Decidida | 2026-11-18 | Resposta do dono à P10 |
+| D-17 | O site não trata de CREA nem de quem executa os serviços de engenharia | Decidida | 2026-11-18 | Resposta do dono à P10 |
+| D-18 | Testes na Cloudflare Workers, em endereço `workers.dev` | Proposta | 2026-11-18 | `hospedagem-e-dominio.md` §1 |
+| D-19 | Registrar o domínio só depois de resolver o risco da marca | Proposta | 2026-11-18 | `hospedagem-e-dominio.md` §3 |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |

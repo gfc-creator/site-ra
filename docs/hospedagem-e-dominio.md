@@ -1,0 +1,65 @@
+# Hospedagem de testes, domínio e marca
+
+Consultas feitas em 2026-11-18. Disponibilidade de domínio e situação de marca mudam:
+reconferir no momento do registro.
+
+## 1. Ambiente de testes
+
+**Proposta (D-18): Cloudflare Workers, no endereço gratuito `workers.dev`.** É a mesma
+plataforma prevista para o site definitivo (D-05), então o que for testado vale para a
+publicação.
+
+| Item | Como funciona |
+| --- | --- |
+| Endereço de testes | `ra-tech.<subdomínio-da-conta>.workers.dev`, sem precisar de domínio |
+| Atualização | Cada envio à branch `develop` publica o site sozinho |
+| Revisão de PR | Cada branch ganha um endereço próprio de pré-visualização |
+| Custo | Requisições de arquivos estáticos são gratuitas |
+| Limites do plano gratuito | 3.000 minutos de compilação por mês, 1 compilação por vez, 100 pré-visualizações por site |
+| Busca no Google | Pré-visualizações em `workers.dev` saem com `noindex`; o endereço principal de testes precisa do mesmo cabeçalho |
+| Privacidade | Os endereços são públicos por padrão; o Cloudflare Access pode exigir login |
+
+### O que o dono precisa fazer
+
+1. Criar uma conta gratuita na Cloudflare, com o e-mail da empresa.
+2. Em Workers, conectar o repositório `gfc-creator/site-ra` e autorizar o acesso ao GitHub.
+
+As credenciais ficam com o dono e não entram no repositório.
+
+### Alternativa
+
+GitHub Pages: gratuito e simples, mas sem pré-visualização por PR e em plataforma
+diferente da prevista para o site definitivo.
+
+## 2. Domínios
+
+| Domínio | Situação na consulta |
+| --- | --- |
+| `ratechenergia.com.br` | **Disponível** |
+| `ratechenergia.com` | **Disponível** |
+| `ratech.net.br` | **Disponível** |
+| `ratech.tec.br` | **Disponível** |
+| `ratech.com.br` | Registrado por terceiro |
+| `ratech.com` | Registrado por terceiro |
+| `radiantech.com.br` | **Disponível** |
+| `ration.com.br` | Registrado por terceiro |
+| `aureatech.com.br` | Registrado por terceiro |
+
+## 3. Marca no INPI
+
+| Nome | Resultado |
+| --- | --- |
+| RA Tech | **Risco.** Sem marca idêntica ativa, mas **RA TECHNOLOGICS** (processo 922459010) está em vigor na classe 37, com instalação, manutenção e reparo de computadores |
+| RA Tech Energia | Nenhum processo idêntico |
+| Ratech | Dois pedidos, ambos definitivamente arquivados (905124243 e 921000324) |
+| Radiantech | Nenhum processo encontrado |
+
+A consulta é preliminar e não substitui a análise de um especialista em marcas: o INPI
+também avalia semelhança e afinidade entre atividades.
+
+## 4. Fontes
+
+- [Registro.br](https://registro.br/) · [Busca de marcas do INPI](https://busca.inpi.gov.br/pePI/)
+- [Previews de Workers](https://developers.cloudflare.com/workers/previews/) ·
+  [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/) ·
+  [Limites de Builds](https://developers.cloudflare.com/workers/ci-cd/builds/limits-and-pricing/)

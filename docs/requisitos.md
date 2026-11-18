@@ -14,7 +14,6 @@ proposta a validar com o dono.
 | RF-05 | O site exibe o símbolo de acessibilidade em destaque | [Lei] art. 63, §1º, Lei 13.146/2015 |
 | RF-06 | O rodapé identifica a razão social e o CNPJ da empresa | [Premissa] |
 | RF-07 | O simulador solar mostra as premissas do cálculo e avisa que o resultado é estimativa, sem prometer retorno do investimento | [Dono] D-12, D-16 |
-| RF-08 | Os textos deixam claro que a engenharia é executada por empresas contratadas e habilitadas | [Premissa], a partir de D-17 |
 
 ## Não funcionais
 

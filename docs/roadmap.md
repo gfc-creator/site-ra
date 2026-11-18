@@ -13,4 +13,4 @@ Uma fase por vez: a seguinte só começa com a anterior aprovada pelo dono.
 
 ## Próximo passo
 
-Apresentar ao dono até 3 caminhos de conceito para o logo da RA Tech.
+Resolver o risco da marca (P14) e, em seguida, apresentar até 3 caminhos de conceito para o logo.
