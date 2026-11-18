@@ -23,9 +23,8 @@ Criar a **identidade visual** e o **site** da RA Tech Energia.
 
 ## Estado atual
 
-Base do site pronta, com o nome em texto; logo em aberto, com opções em
-`docs/marca/opcoes-logo/` (D-21). Próxima etapa: publicar o site de testes na Cloudflare.
-Antes de registrar domínio e marca, avaliar o risco de `docs/hospedagem-e-dominio.md` §3.
+Site de testes publicado na Cloudflare, com o logo Núcleo de energia (`docs/marca/README.md`).
+Próxima etapa: conectar o domínio `ratechenergia.com.br`, depois de registrado pelo dono.
 
 Comandos: `npm run dev`, `npm run check`, `npm run format:check` e `npm test`.
 

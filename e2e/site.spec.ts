@@ -23,6 +23,15 @@ for (const caminho of paginas) {
   });
 }
 
+test("o logo aparece no topo e no rodapé", async ({ page }) => {
+  await page.goto("/");
+  for (const area of ["banner", "contentinfo"] as const) {
+    const logo = page.getByRole(area).getByRole("img", { name: "RA Tech Energia" });
+    await expect(logo).toBeVisible();
+    await expect.poll(() => logo.evaluate((i: HTMLImageElement) => i.naturalWidth > 0)).toBe(true);
+  }
+});
+
 test("o rodapé identifica a empresa", async ({ page }) => {
   await page.goto("/");
   const rodape = page.getByRole("contentinfo");

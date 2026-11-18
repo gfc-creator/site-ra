@@ -1,7 +1,7 @@
 # Opções de logo
 
-Conceitos guardados para consulta. **Nenhum foi aprovado.** Na avaliação do dono
-(2026-11-18), as opções ficaram simples demais; a escolha do logo continua em aberto.
+Primeira rodada, guardada para consulta. **Nenhuma destas opções foi aprovada.** O logo escolhido
+está em [`../README.md`](../README.md).
 
 | Opção | Arquivo | Ideia | Nome ao lado |
 | --- | --- | --- | --- |
@@ -11,5 +11,4 @@ Conceitos guardados para consulta. **Nenhum foi aprovado.** Na avaliação do do
 
 Cores usadas: azul `#0B2545`, azul médio `#1D4ED8` e âmbar `#F59E0B`.
 
-São estudos de conceito, e não arquivos finais. Uma nova rodada deve buscar um desenho
-mais elaborado.
+São estudos de conceito, e não arquivos finais.
