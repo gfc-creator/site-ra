@@ -12,6 +12,16 @@ const dicas = defineCollection({
     ordem: z.number(),
     atualizadoEm: z.coerce.date(),
     fontes: z.array(z.object({ nome: z.string(), url: z.url() })).default([]),
+    videos: z
+      .array(
+        z.object({
+          plataforma: z.enum(["facebook", "instagram", "youtube"]),
+          url: z.url(),
+          titulo: z.string(),
+          autor: z.string().optional(),
+        }),
+      )
+      .default([]),
   }),
 });
 

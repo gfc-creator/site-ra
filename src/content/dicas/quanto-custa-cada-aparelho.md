@@ -4,6 +4,11 @@ resumo: A conta é simples, potência × horas de uso × preço da energia, e mo
 tema: Economia de energia
 ordem: 7
 atualizadoEm: 2026-11-23
+videos:
+  - plataforma: instagram
+    url: https://www.instagram.com/reel/Df8B268x1ui/
+    titulo: Quanto custa deixar o ar ligado a noite toda?
+    autor: Ar condicionado na Prática
 ---
 
 Para saber quanto um aparelho gasta, use esta conta:

@@ -16,4 +16,5 @@ const { dica } = Astro.props;
     </a>
   </h3>
   <p class="text-neutro-600">{dica.data.resumo}</p>
+  {dica.data.videos.length > 0 && <p class="text-sm font-semibold text-azul-700">Com vídeo</p>}
 </article>

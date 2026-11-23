@@ -111,6 +111,23 @@ test("a calculadora de aparelhos usa a tarifa da Equatorial", async ({ page }) =
   await expect(page.locator("#consumo-aparelho")).toHaveText("165 kWh");
 });
 
+test("o vídeo da dica só carrega depois do clique", async ({ page }) => {
+  const externos: string[] = [];
+  page.on("request", (r) => {
+    if (/facebook|instagram|youtube/.test(new URL(r.url()).hostname)) externos.push(r.url());
+  });
+  await page.route(/facebook\.com|instagram\.com/, (rota) =>
+    rota.fulfill({ status: 200, contentType: "text/html", body: "<p>vídeo</p>" }),
+  );
+  await page.goto("/dicas/creditos-de-energia-tem-validade/");
+  await expect(page.getByRole("button", { name: "Assistir ao vídeo" })).toBeVisible();
+  expect(externos).toEqual([]);
+  await page.getByRole("button", { name: "Assistir ao vídeo" }).click();
+  const quadro = page.locator('iframe[title="Seu crédito solar tem validade?"]');
+  await expect(quadro).toHaveAttribute("src", /facebook\.com\/plugins\/video\.php/);
+  expect(externos.length).toBeGreaterThan(0);
+});
+
 test("a página inicial mostra dicas em destaque", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("#dicas article")).toHaveCount(3);

@@ -4,6 +4,10 @@ resumo: Nem sempre. O inversor precisa acompanhar a potência dos painéis, sen�
 tema: Como funciona
 ordem: 4
 atualizadoEm: 2026-11-23
+videos:
+  - plataforma: facebook
+    url: https://www.facebook.com/100000759568370/videos/1409997487565040/
+    titulo: Placa de 700 W gera mais que placa de 600 W?
 ---
 
 A potência do sistema não depende só dos painéis. O **inversor** tem um limite de potência de saída.

@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import CartaoDica from "../../components/CartaoDica.astro";
+import VideoExterno from "../../components/VideoExterno.astro";
 import { empresa } from "../../lib/empresa";
 
 export async function getStaticPaths() {
@@ -34,6 +35,14 @@ const atualizado = dica.data.atualizadoEm.toLocaleDateString("pt-BR", { timeZone
       <p class="text-sm font-semibold text-azul-700">{dica.data.tema}</p>
       <h1 class="text-4xl">{dica.data.titulo}</h1>
       <p class="text-lg text-neutro-600">{dica.data.resumo}</p>
+      {dica.data.videos.length > 0 && (
+        <section class="grid gap-3" aria-label="Vídeo sobre o tema">
+          <h2 class="text-2xl">Veja em vídeo</h2>
+          {dica.data.videos.map((v) => (
+            <VideoExterno {...v} />
+          ))}
+        </section>
+      )}
     </header>
     <div class="texto">
       <Content />
