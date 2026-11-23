@@ -14,6 +14,7 @@ proposta a validar com o dono.
 | RF-05 | O site exibe o símbolo de acessibilidade em destaque | [Lei] art. 63, §1º, Lei 13.146/2015 |
 | RF-06 | O rodapé identifica a razão social e o CNPJ da empresa | [Premissa] |
 | RF-09 | Seção pública de parceiros e clientes, com imagem padrão para quem não tem logo | [Dono] D-24, D-25 |
+| RF-10 | Página de dicas de energia, com calculadora de consumo de aparelhos | [Dono] D-28 |
 | RF-07 | O simulador solar mostra as premissas do cálculo e avisa que o resultado é estimativa, sem prometer retorno do investimento | [Dono] D-12, D-16 |
 
 ## Não funcionais

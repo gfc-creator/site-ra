@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  dica: CollectionEntry<"dicas">;
+}
+
+const { dica } = Astro.props;
+---
+
+<article class="grid content-start gap-2 rounded-md border border-neutro-200 bg-neutro-0 p-5">
+  <p class="text-sm font-semibold text-azul-700">{dica.data.tema}</p>
+  <h3 class="text-lg">
+    <a href={`/dicas/${dica.id}/`} class="hover:text-azul-700">
+      {dica.data.titulo}
+    </a>
+  </h3>
+  <p class="text-neutro-600">{dica.data.resumo}</p>
+</article>

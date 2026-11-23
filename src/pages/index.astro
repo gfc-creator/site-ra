@@ -3,7 +3,14 @@ import Base from "../layouts/Base.astro";
 import PainelCircuito from "../components/PainelCircuito.astro";
 import Simulador from "../components/Simulador.astro";
 import Vitrine from "../components/Vitrine.astro";
+import { getCollection } from "astro:content";
+import CartaoDica from "../components/CartaoDica.astro";
 import { empresa } from "../lib/empresa";
+
+const destaques = (await getCollection("dicas"))
+  .sort((a, b) => a.data.ordem - b.data.ordem)
+  .filter((d, i, todas) => todas.findIndex((x) => x.data.tema === d.data.tema) === i || i === 2)
+  .slice(0, 3);
 
 const frentes = [
   {
@@ -111,6 +118,24 @@ const etapas = [
   <Vitrine />
 
   <Simulador />
+
+  <section id="dicas" class="py-16 md:py-24" aria-labelledby="titulo-dicas">
+    <div class="contido grid gap-8">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <h2 id="titulo-dicas" class="text-3xl md:text-4xl">
+          Dicas de energia
+        </h2>
+        <a href="/dicas/" class="font-semibold text-azul-700">
+          Ver todas as dicas
+        </a>
+      </div>
+      <div class="grid gap-4 md:grid-cols-3">
+        {destaques.map((d) => (
+          <CartaoDica dica={d} />
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section id="contato" class="py-16 md:py-24" aria-labelledby="titulo-contato">
     <div class="contido grid justify-items-start gap-5">

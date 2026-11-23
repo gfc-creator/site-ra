@@ -2,7 +2,13 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 import { temVitrine, vitrine } from "../src/lib/vitrine.ts";
 
-const paginas = ["/", "/privacidade/", "/acessibilidade/"];
+const paginas = [
+  "/",
+  "/privacidade/",
+  "/acessibilidade/",
+  "/dicas/",
+  "/dicas/creditos-de-energia-tem-validade/",
+];
 
 for (const caminho of paginas) {
   test(`sem falhas de acessibilidade em ${caminho}`, async ({ page }) => {
@@ -79,6 +85,35 @@ test("a seção de parceiros e clientes mostra os nomes e as imagens", async ({ 
       .poll(() => imagem.evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth > 0))
       .toBe(true);
   }
+});
+
+test("a página de dicas lista os dois temas e abre cada dica", async ({ page }) => {
+  await page.goto("/dicas/");
+  await expect(page.getByRole("heading", { name: "Como funciona", exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Economia de energia", exact: true }),
+  ).toBeVisible();
+  await expect(page.locator("main article")).toHaveCount(8);
+  await page.getByRole("link", { name: "Os créditos de energia solar têm validade?" }).click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    "Os créditos de energia solar têm validade?",
+  );
+  await expect(page.locator(".texto")).toContainText("60 meses");
+});
+
+test("a calculadora de aparelhos usa a tarifa da Equatorial", async ({ page }) => {
+  await page.goto("/dicas/");
+  await expect(page.locator("#consumo-aparelho")).toHaveText("264 kWh");
+  await expect(page.locator("#custo-aparelho")).toHaveText(/R\$\s325,91/);
+  await page.locator("#aparelho").selectOption({ label: "Chuveiro elétrico" });
+  await expect(page.locator("#consumo-aparelho")).toHaveText("83 kWh");
+  await page.locator("#horas").fill("1");
+  await expect(page.locator("#consumo-aparelho")).toHaveText("165 kWh");
+});
+
+test("a página inicial mostra dicas em destaque", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("#dicas article")).toHaveCount(3);
 });
 
 test("o site de testes fica fora da busca", async ({ page }) => {

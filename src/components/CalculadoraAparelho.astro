@@ -1,0 +1,129 @@
+---
+import { reais, tarifaComTributos } from "../lib/simulador";
+
+/** Potências de exemplo: o valor certo está na etiqueta de cada aparelho. */
+const exemplos = [
+  { nome: "Chuveiro elétrico", watts: 5500, horas: 0.5 },
+  { nome: "Ar-condicionado 12.000 BTUs", watts: 1100, horas: 8 },
+  { nome: "Ferro de passar", watts: 1000, horas: 0.5 },
+  { nome: "Televisão", watts: 100, horas: 5 },
+  { nome: "Lâmpada LED", watts: 9, horas: 6 },
+];
+const inicial = exemplos[1];
+const kwh = (inicial.watts / 1000) * inicial.horas * 30;
+---
+
+<form
+  id="calculadora"
+  class="grid min-w-0 gap-5 rounded-md border border-neutro-200 bg-neutro-0 p-5 md:p-8"
+  data-tarifa={tarifaComTributos}
+>
+  <div class="grid gap-2">
+    <label for="aparelho" class="font-semibold">
+      Aparelho de exemplo
+    </label>
+    <select
+      id="aparelho"
+      class="min-h-11 w-full min-w-0 rounded border border-neutro-600 bg-neutro-0 px-3"
+    >
+      {exemplos.map((e) => (
+        <option value={`${e.watts}|${e.horas}`} selected={e === inicial}>
+          {e.nome}
+        </option>
+      ))}
+    </select>
+  </div>
+  <div class="grid gap-4 sm:grid-cols-3">
+    <div class="grid gap-2">
+      <label for="watts" class="font-semibold">
+        Potência (W)
+      </label>
+      <input
+        id="watts"
+        type="number"
+        min="1"
+        max="20000"
+        value={inicial.watts}
+        inputmode="numeric"
+        class="min-h-11 w-full min-w-0 rounded border border-neutro-600 px-3"
+      />
+    </div>
+    <div class="grid gap-2">
+      <label for="horas" class="font-semibold">
+        Horas por dia
+      </label>
+      <input
+        id="horas"
+        type="number"
+        min="0"
+        max="24"
+        step="0.5"
+        value={inicial.horas}
+        inputmode="decimal"
+        class="min-h-11 w-full min-w-0 rounded border border-neutro-600 px-3"
+      />
+    </div>
+    <div class="grid gap-2">
+      <label for="dias" class="font-semibold">
+        Dias no mês
+      </label>
+      <input
+        id="dias"
+        type="number"
+        min="1"
+        max="31"
+        value="30"
+        inputmode="numeric"
+        class="min-h-11 w-full min-w-0 rounded border border-neutro-600 px-3"
+      />
+    </div>
+  </div>
+  <dl class="grid gap-4 border-t border-neutro-200 pt-5 sm:grid-cols-2" aria-live="polite">
+    <div>
+      <dt class="text-sm text-neutro-600">Consumo no mês</dt>
+      <dd id="consumo-aparelho" class="font-titulo text-xl font-extrabold">
+        {Math.round(kwh).toLocaleString("pt-BR")} kWh
+      </dd>
+    </div>
+    <div>
+      <dt class="text-sm text-neutro-600">Custo estimado no mês</dt>
+      <dd id="custo-aparelho" class="font-titulo text-xl font-extrabold">
+        {reais(kwh * tarifaComTributos, 2)}
+      </dd>
+    </div>
+  </dl>
+  <p class="text-sm text-neutro-600">
+    Preço da energia da Equatorial Maranhão de {reais(tarifaComTributos, 2)} por kWh, com tributos
+    estimados. As potências dos exemplos são aproximadas: confira a etiqueta do seu aparelho.
+  </p>
+</form>
+
+<script>
+  import { reais } from "../lib/simulador";
+
+  const form = document.querySelector<HTMLFormElement>("#calculadora");
+  const campo = (id: string) => document.querySelector<HTMLInputElement>(id);
+  const tarifa = Number(form?.dataset.tarifa);
+
+  function calcular() {
+    const watts = Number(campo("#watts")?.value) || 0;
+    const horas = Number(campo("#horas")?.value) || 0;
+    const dias = Number(campo("#dias")?.value) || 0;
+    const kwh = (watts / 1000) * horas * dias;
+    const consumo = document.querySelector("#consumo-aparelho");
+    const custo = document.querySelector("#custo-aparelho");
+    if (consumo) consumo.textContent = `${Math.round(kwh).toLocaleString("pt-BR")} kWh`;
+    if (custo) custo.textContent = reais(kwh * tarifa, 2);
+  }
+
+  document.querySelector<HTMLSelectElement>("#aparelho")?.addEventListener("change", (e) => {
+    const [watts, horas] = (e.target as HTMLSelectElement).value.split("|");
+    const w = campo("#watts");
+    const h = campo("#horas");
+    if (w) w.value = watts ?? "";
+    if (h) h.value = horas ?? "";
+    calcular();
+  });
+  form?.addEventListener("input", calcular);
+  form?.addEventListener("submit", (e) => e.preventDefault());
+</script>

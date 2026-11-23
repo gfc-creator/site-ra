@@ -58,6 +58,27 @@
 }
 
 @layer components {
+  .texto {
+    display: grid;
+    gap: 1rem;
+    font-size: 1.0625rem;
+  }
+  .texto ol,
+  .texto ul {
+    display: grid;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+  }
+  .texto ol {
+    list-style: decimal;
+  }
+  .texto ul {
+    list-style: disc;
+  }
+  .texto a {
+    color: var(--cor-azul-700);
+    text-decoration: underline;
+  }
   .contido {
     width: 100%;
     max-width: 72rem;
