@@ -1,0 +1,79 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import CartaoDica from "../../components/CartaoDica.astro";
+import { empresa } from "../../lib/empresa";
+
+export async function getStaticPaths() {
+  const dicas = await getCollection("dicas");
+  return dicas.map((dica) => ({ params: { id: dica.id }, props: { dica, dicas } }));
+}
+
+interface Props {
+  dica: CollectionEntry<"dicas">;
+  dicas: CollectionEntry<"dicas">[];
+}
+
+const { dica, dicas } = Astro.props;
+const { Content } = await render(dica);
+const outras = dicas
+  .filter((d) => d.id !== dica.id && d.data.tema === dica.data.tema)
+  .sort((a, b) => a.data.ordem - b.data.ordem)
+  .slice(0, 3);
+const atualizado = dica.data.atualizadoEm.toLocaleDateString("pt-BR", { timeZone: "UTC" });
+---
+
+<Base titulo={dica.data.titulo} descricao={dica.data.resumo}>
+  <article class="contido grid max-w-3xl gap-6 py-12">
+    <nav aria-label="Caminho">
+      <a href="/dicas/" class="text-sm font-semibold text-azul-700">
+        Dicas de energia
+      </a>
+    </nav>
+    <header class="grid gap-3">
+      <p class="text-sm font-semibold text-azul-700">{dica.data.tema}</p>
+      <h1 class="text-4xl">{dica.data.titulo}</h1>
+      <p class="text-lg text-neutro-600">{dica.data.resumo}</p>
+    </header>
+    <div class="texto">
+      <Content />
+    </div>
+    {dica.data.fontes.length > 0 && (
+      <p class="text-sm text-neutro-600">
+        Fonte:{" "}
+        {dica.data.fontes.map((f, i) => (
+          <>
+            {i > 0 && " · "}
+            <a href={f.url} rel="noopener">
+              {f.nome}
+            </a>
+          </>
+        ))}
+      </p>
+    )}
+    <p class="text-sm text-neutro-600">Atualizado em {atualizado}.</p>
+    <div class="flex flex-wrap gap-3">
+      <a href="/#simulador" class="botao botao-sol">
+        Simular economia
+      </a>
+      <a href={empresa.whatsapp} class="botao botao-whatsapp" rel="noopener">
+        Tirar dúvidas no WhatsApp
+      </a>
+    </div>
+  </article>
+
+  {outras.length > 0 && (
+    <section class="border-t border-neutro-200 py-12" aria-labelledby="titulo-outras">
+      <div class="contido grid gap-6">
+        <h2 id="titulo-outras" class="text-2xl">
+          Outras dicas
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {outras.map((d) => (
+            <CartaoDica dica={d} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Base>

@@ -12,6 +12,7 @@ Site em construção, com Astro, Tailwind CSS e tokens de marca. Comece por:
 | [`docs/empresa.md`](docs/empresa.md) | Dados oficiais da empresa que podem ser publicados |
 | [`docs/hospedagem-e-dominio.md`](docs/hospedagem-e-dominio.md) | Ambiente de testes, domínios e consulta de marca |
 | [`docs/simulador.md`](docs/simulador.md) | Premissas e fontes do simulador solar |
+| [`docs/dicas.md`](docs/dicas.md) | Como incluir dicas de energia |
 | [`docs/vitrine.md`](docs/vitrine.md) | Como preencher parceiros e clientes |
 | [`docs/requisitos.md`](docs/requisitos.md) | Requisitos numerados |
 | [`docs/tecnologias.md`](docs/tecnologias.md) | Levantamento das tecnologias, com versões e fontes |

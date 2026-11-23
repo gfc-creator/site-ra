@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import CalculadoraAparelho from "../../components/CalculadoraAparelho.astro";
+import CartaoDica from "../../components/CartaoDica.astro";
+import DiagramaSolar from "../../components/DiagramaSolar.astro";
+
+const dicas = (await getCollection("dicas")).sort((a, b) => a.data.ordem - b.data.ordem);
+const temas = ["Como funciona", "Economia de energia"] as const;
+---
+
+<Base
+  titulo="Dicas de energia"
+  descricao="Como funciona a energia solar e como economizar energia no dia a dia."
+>
+  <section class="bg-azul-950 text-neutro-0">
+    <div class="contido grid gap-4 py-14">
+      <h1 class="max-w-[22ch] text-4xl md:text-5xl">Dicas de energia</h1>
+      <p class="max-w-[60ch] text-lg text-azul-100">
+        Como funciona a energia solar, o que muda na sua conta e como gastar menos energia no dia a
+        dia.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14" aria-labelledby="titulo-caminho">
+    <div class="contido grid gap-6">
+      <h2 id="titulo-caminho" class="text-3xl">
+        O caminho da energia solar
+      </h2>
+      <DiagramaSolar />
+    </div>
+  </section>
+
+  {temas.map((tema) => (
+    <section class="border-t border-neutro-200 py-14" aria-label={tema}>
+      <div class="contido grid gap-6">
+        <h2 class="text-3xl">{tema}</h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {dicas
+            .filter((d) => d.data.tema === tema)
+            .map((d) => (
+              <CartaoDica dica={d} />
+            ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section id="calcular" class="bg-neutro-50 py-14" aria-labelledby="titulo-calculadora">
+    <div class="contido grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-[5fr_7fr] md:items-start">
+      <div class="grid gap-3">
+        <h2 id="titulo-calculadora" class="text-3xl">
+          Quanto custa usar cada aparelho?
+        </h2>
+        <p class="text-neutro-600">
+          Escolha um exemplo ou informe a potência da etiqueta e o tempo de uso.
+        </p>
+      </div>
+      <CalculadoraAparelho />
+    </div>
+  </section>
+</Base>

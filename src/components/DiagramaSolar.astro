@@ -1,0 +1,91 @@
+---
+// O caminho da energia, do painel à rede; a lista ao lado diz o mesmo em texto.
+const etapas = [
+  { x: 20, rotulo: "Painéis" },
+  { x: 185, rotulo: "Inversor" },
+  { x: 350, rotulo: "Quadro de luz" },
+  { x: 515, rotulo: "Medidor" },
+  { x: 680, rotulo: "Rede" },
+];
+---
+
+<figure class="grid gap-4">
+  <div class="hidden md:block">
+    <svg viewBox="0 0 840 170" class="h-auto w-full" aria-hidden="true" focusable="false">
+      <defs>
+        <marker
+          id="seta"
+          viewBox="0 0 10 10"
+          refX="9"
+          refY="5"
+          markerWidth="7"
+          markerHeight="7"
+          orient="auto"
+        >
+          <path d="M0 0L10 5L0 10Z" fill="var(--cor-ambar-500)"></path>
+        </marker>
+      </defs>
+      {etapas.slice(0, -1).map((e) => (
+        <line
+          x1={e.x + 140}
+          y1="62"
+          x2={e.x + 162}
+          y2="62"
+          stroke="var(--cor-ambar-500)"
+          stroke-width="4"
+          marker-end="url(#seta)"
+        />
+      ))}
+      {etapas.map((e, i) => (
+        <g>
+          <rect
+            x={e.x}
+            y="22"
+            width="136"
+            height="80"
+            rx="8"
+            fill={i === 0 ? "var(--cor-azul-900)" : "var(--cor-neutro-0)"}
+            stroke="var(--cor-azul-700)"
+            stroke-width="2"
+          />
+          <text
+            x={e.x + 68}
+            y="68"
+            text-anchor="middle"
+            font-size="17"
+            font-weight="600"
+            fill={i === 0 ? "var(--cor-neutro-0)" : "var(--cor-azul-900)"}
+          >
+            {e.rotulo}
+          </text>
+        </g>
+      ))}
+      <path
+        d="M418 102V140H748V102"
+        fill="none"
+        stroke="var(--cor-azul-700)"
+        stroke-width="3"
+        stroke-dasharray="7 6"
+      ></path>
+      <text x="583" y="160" text-anchor="middle" font-size="15" fill="var(--cor-neutro-600)">
+        À noite, a rede devolve a energia em forma de créditos
+      </text>
+    </svg>
+  </div>
+  <ol class="grid gap-2 md:hidden">
+    {etapas.map((e, i) => (
+      <li
+        class:list={[
+          "rounded-md border-2 border-azul-700 px-4 py-3 font-semibold",
+          i === 0 ? "bg-azul-900 text-neutro-0" : "bg-neutro-0 text-azul-900",
+        ]}
+      >
+        {e.rotulo}
+      </li>
+    ))}
+  </ol>
+  <figcaption class="text-sm text-neutro-600">
+    A energia sai dos painéis, é convertida no inversor, abastece o quadro de luz e o que sobra
+    passa pelo medidor até a rede, virando crédito na conta.
+  </figcaption>
+</figure>
