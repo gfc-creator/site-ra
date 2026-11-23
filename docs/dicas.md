@@ -36,6 +36,22 @@ Texto da dica.
 
 `tema` é "Como funciona" ou "Economia de energia". `ordem` define a posição na lista.
 
+### Vídeos
+
+Uma dica pode ter vídeos do Facebook, do Instagram ou do YouTube, no cabeçalho:
+
+```md
+videos:
+  - plataforma: facebook
+    url: https://www.facebook.com/.../videos/123/
+    titulo: Título do vídeo
+    autor: Nome de quem publicou
+```
+
+O vídeo só carrega depois do clique em "Assistir ao vídeo"; antes disso, a página não chama a
+plataforma. Os vídeos atuais são de terceiros, escolhidos pelo dono (D-29), com o crédito ao autor
+e o link para a publicação original.
+
 ## Cuidados
 
 - Números e regras vêm de fonte oficial, citada em `fontes`, e são revisados quando a regra muda.
