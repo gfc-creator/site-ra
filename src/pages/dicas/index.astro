@@ -4,9 +4,11 @@ import Base from "../../layouts/Base.astro";
 import CalculadoraAparelho from "../../components/CalculadoraAparelho.astro";
 import CartaoDica from "../../components/CartaoDica.astro";
 import DiagramaSolar from "../../components/DiagramaSolar.astro";
+import VideoExterno from "../../components/VideoExterno.astro";
 
 const dicas = (await getCollection("dicas")).sort((a, b) => a.data.ordem - b.data.ordem);
 const temas = ["Como funciona", "Economia de energia"] as const;
+const comVideo = dicas.flatMap((d) => d.data.videos.map((v) => ({ dica: d, video: v })));
 ---
 
 <Base
@@ -31,6 +33,26 @@ const temas = ["Como funciona", "Economia de energia"] as const;
       <DiagramaSolar />
     </div>
   </section>
+
+  {comVideo.length > 0 && (
+    <section id="videos" class="border-t border-neutro-200 py-14" aria-labelledby="titulo-videos">
+      <div class="contido grid gap-6">
+        <h2 id="titulo-videos" class="text-3xl">
+          Vídeos
+        </h2>
+        <div class="grid grid-cols-[minmax(0,1fr)] gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {comVideo.map(({ dica, video }) => (
+            <div class="grid content-start gap-2">
+              <VideoExterno {...video} />
+              <a href={`/dicas/${dica.id}/`} class="text-sm font-semibold">
+                Ler a dica: {dica.data.titulo}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {temas.map((tema) => (
     <section class="border-t border-neutro-200 py-14" aria-label={tema}>

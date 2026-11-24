@@ -94,7 +94,9 @@ test("a página de dicas lista os dois temas e abre cada dica", async ({ page })
     page.getByRole("heading", { name: "Economia de energia", exact: true }),
   ).toBeVisible();
   await expect(page.locator("main article")).toHaveCount(8);
-  await page.getByRole("link", { name: "Os créditos de energia solar têm validade?" }).click();
+  await page
+    .getByRole("link", { name: "Os créditos de energia solar têm validade?", exact: true })
+    .click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Os créditos de energia solar têm validade?",
   );
@@ -126,6 +128,19 @@ test("o vídeo da dica só carrega depois do clique", async ({ page }) => {
   const quadro = page.locator('iframe[title="Seu crédito solar tem validade?"]');
   await expect(quadro).toHaveAttribute("src", /facebook\.com\/plugins\/video\.php/);
   expect(externos.length).toBeGreaterThan(0);
+});
+
+test("a página de dicas reúne os vídeos, sem carregar antes do clique", async ({ page }) => {
+  const externos: string[] = [];
+  page.on("request", (r) => {
+    if (/facebook|instagram|youtube/.test(new URL(r.url()).hostname)) externos.push(r.url());
+  });
+  await page.goto("/dicas/");
+  const secao = page.locator("#videos");
+  await expect(secao.getByRole("heading", { name: "Vídeos" })).toBeVisible();
+  await expect(secao.getByRole("button", { name: "Assistir ao vídeo" })).toHaveCount(3);
+  await expect(secao.getByRole("link", { name: /^Ler a dica:/ })).toHaveCount(3);
+  expect(externos).toEqual([]);
 });
 
 test("a página inicial mostra dicas em destaque", async ({ page }) => {
