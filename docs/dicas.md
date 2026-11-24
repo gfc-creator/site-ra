@@ -57,6 +57,22 @@ e o link para a publicação original.
 O vídeo aparece na página da dica e também na seção "Vídeos" da página `/dicas/`, sem
 nenhuma configuração extra.
 
+## Premissas da dica do Maranhão
+
+A dica "No Maranhão, o que mais pesa na conta de luz?" usa estas premissas, a validar com contas
+reais de clientes:
+
+- Calor o ano todo: ar-condicionado e ventilador usados nos 12 meses.
+- Ar-condicionado 10 horas por noite: o consumo de 8 horas da Equatorial (194 kWh por mês para
+  12.000 BTU), levado para 10 horas. Ficam 202, 242 e 315 kWh por mês para 9.000, 12.000 e
+  18.000 BTU.
+- Ventilador de 100 W, 10 horas por dia: 30 kWh por mês. Chuveiro na posição verão, 3.500 W,
+  30 minutos por dia para a casa toda: 52 kWh por mês. Geladeira frost free: 57 kWh por mês.
+- No Nordeste, o chuveiro responde por só 2,6% do consumo das casas (pesquisa Eletrobras de 2019).
+- Custos com a tarifa do simulador (R$ 1,2345 por kWh). Os três perfis de casa (150, 380 e
+  550 kWh por mês) passaram pelo `estimar` de `src/lib/simulador.ts`; sem ar-condicionado, ligação
+  monofásica ou bifásica; com ar-condicionado, bifásica.
+
 ## Cuidados
 
 - Números e regras vêm de fonte oficial, citada em `fontes`, e são revisados quando a regra muda.
