@@ -93,7 +93,7 @@ test("a página de dicas lista os dois temas e abre cada dica", async ({ page })
   await expect(
     page.getByRole("heading", { name: "Economia de energia", exact: true }),
   ).toBeVisible();
-  await expect(page.locator("main article")).toHaveCount(8);
+  await expect(page.locator("main article")).toHaveCount(9);
   await page
     .getByRole("link", { name: "Os créditos de energia solar têm validade?", exact: true })
     .click();

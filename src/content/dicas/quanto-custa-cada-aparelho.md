@@ -19,4 +19,4 @@ A potência vem na etiqueta do aparelho, em watts. Divida por 1.000 para ter o v
 
 Por exemplo: um aparelho de 1.000 W ligado 8 horas por dia, durante 30 dias, consome 240 kWh no mês.
 
-Os que mais pesam costumam ser os que **esquentam ou esfriam**: chuveiro elétrico, ar-condicionado, ferro de passar e forno elétrico. Use a calculadora da página de dicas para fazer a conta com o preço da energia da Equatorial Maranhão.
+Os que mais pesam costumam ser os que **esquentam ou esfriam**: chuveiro elétrico, ar-condicionado, ferro de passar e forno elétrico. No Maranhão, o ar-condicionado vem na frente: veja [o que mais pesa na conta](/dicas/o-que-mais-pesa-no-maranhao/). Use a calculadora da página de dicas para fazer a conta com o preço da energia da Equatorial Maranhão.
