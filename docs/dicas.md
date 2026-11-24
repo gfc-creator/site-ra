@@ -8,6 +8,8 @@ energia. Pedido do dono em 2026-11-23, a partir de vídeos de redes sociais usad
 - **O caminho da energia solar:** diagrama do painel até a rede.
 - **Dicas por tema:** "Como funciona" e "Economia de energia", cada uma com página própria, boa
   para compartilhar no WhatsApp e nas redes.
+- **Vídeos:** seção com todos os vídeos das dicas, cada um com o link para a dica. Pedido do
+  dono em 2026-11-24, porque os vídeos ficavam escondidos dentro das dicas.
 - **Calculadora de aparelhos:** potência × horas × dias × preço do kWh, com a tarifa da Equatorial
   Maranhão usada no simulador (`src/lib/simulador.ts`).
 
@@ -51,6 +53,9 @@ videos:
 O vídeo só carrega depois do clique em "Assistir ao vídeo"; antes disso, a página não chama a
 plataforma. Os vídeos atuais são de terceiros, escolhidos pelo dono (D-29), com o crédito ao autor
 e o link para a publicação original.
+
+O vídeo aparece na página da dica e também na seção "Vídeos" da página `/dicas/`, sem
+nenhuma configuração extra.
 
 ## Cuidados
 
