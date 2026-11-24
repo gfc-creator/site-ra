@@ -25,7 +25,7 @@ Criar a **identidade visual** e o **site** da RA Tech Energia.
 ## Estado atual
 
 Site no ar em `https://ratechenergia.com.br`, na Cloudflare, liberado para a busca desde
-2026-11-24 (D-30). Falta o dono configurar `www` e Always Use HTTPS no painel.
+2026-11-24 (D-30). `www` e `http` redirecionam para `https://ratechenergia.com.br`.
 
 Comandos: `npm run dev`, `npm run check`, `npm run format:check` e `npm test`.
 

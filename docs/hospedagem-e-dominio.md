@@ -59,7 +59,15 @@ o órgão oficial e cobra R$ 40 por ano, sem intermediário. Disponível na cons
 ### Situação em 2026-11-24
 
 - Passos 1 a 5 feitos: `https://ratechenergia.com.br` abre o site.
-- Falta, no painel da Cloudflare: adicionar `www.ratechenergia.com.br` como Custom Domain do Worker e ativar **Always Use HTTPS** (SSL/TLS › Edge Certificates).
+- `www` e https configurados pelo dono no painel da Cloudflare em 2026-11-24:
+  - registro DNS `A www 192.0.2.1`, com proxy (endereço só para redirecionar);
+  - Redirect Rule `https://www.ratechenergia.com.br/*` → `https://ratechenergia.com.br/${1}`, 301,
+    mantendo a query string: o site tem um endereço só;
+  - **Always Use HTTPS** ligado: todo `http` vai para `https`.
+- Conferido em 2026-11-24: as quatro combinações (com e sem `www`, `http` e `https`) terminam em
+  `https://ratechenergia.com.br`.
+- O Custom Domain `www` no Worker não foi usado: o painel não encontrou a zona por esse caminho, e o
+  redirecionamento evita o mesmo conteúdo em dois endereços.
 - Depois do lançamento, vale cadastrar o site no Google Search Console e enviar o mapa `https://ratechenergia.com.br/sitemap-index.xml`.
 
 O e-mail `contato@ratechenergia.com.br` pode ser encaminhado para uma caixa existente com o Email
