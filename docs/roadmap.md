@@ -13,4 +13,4 @@ Uma fase por vez: a seguinte só começa com a anterior aprovada pelo dono.
 
 ## Próximo passo
 
-Configurar `www` e Always Use HTTPS na Cloudflare (`hospedagem-e-dominio.md` §2).
+Opcional: cadastrar o site no Google Search Console e enviar o mapa do site (`hospedagem-e-dominio.md` §2).
