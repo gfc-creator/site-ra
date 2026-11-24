@@ -148,9 +148,17 @@ test("a página inicial mostra dicas em destaque", async ({ page }) => {
   await expect(page.locator("#dicas article")).toHaveCount(3);
 });
 
-test("o site de testes fica fora da busca", async ({ page }) => {
-  await page.goto("/");
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "noindex");
+test("o site fica visível na busca, com endereço oficial", async ({ page }) => {
+  await page.goto("/dicas/");
+  await expect(page.locator('meta[name="robots"]')).toHaveCount(0);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    "href",
+    "https://ratechenergia.com.br/dicas/",
+  );
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+    "content",
+    "https://ratechenergia.com.br/og.png",
+  );
 });
 
 test("o menu do celular abre e leva às seções", async ({ page, isMobile }) => {

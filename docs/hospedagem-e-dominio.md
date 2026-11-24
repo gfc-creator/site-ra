@@ -16,7 +16,7 @@ publicação.
 | Revisão de PR | Cada branch ganha um endereço próprio de pré-visualização, com `npx wrangler preview`; exige o bloco `previews` no `wrangler.jsonc` |
 | Custo | Requisições de arquivos estáticos são gratuitas |
 | Limites do plano gratuito | 3.000 minutos de compilação por mês, 1 compilação por vez, 100 pré-visualizações por site |
-| Busca no Google | O site de testes sai com `noindex`; retirar no lançamento (`public/_headers`, `public/robots.txt` e `src/layouts/Base.astro`) |
+| Busca no Google | Liberada no lançamento (2026-11-24, D-30): sem `noindex`, com `robots.txt`, mapa do site e endereço canônico em `ratechenergia.com.br`. O endereço `workers.dev` continua respondendo, mas cada página aponta para o domínio oficial |
 | Privacidade | Os endereços são públicos por padrão; o Cloudflare Access pode exigir login |
 
 ### O que o dono precisa fazer
@@ -35,7 +35,7 @@ diferente da prevista para o site definitivo.
 
 | Domínio | Situação na consulta |
 | --- | --- |
-| `ratechenergia.com.br` | **Disponível** |
+| `ratechenergia.com.br` | **Registrado pelo dono**, com DNS na Cloudflare e site no ar |
 | `ratechenergia.com` | **Disponível** |
 | `ratech.net.br` | **Disponível** |
 | `ratech.tec.br` | **Disponível** |
@@ -54,7 +54,13 @@ o órgão oficial e cobra R$ 40 por ano, sem intermediário. Disponível na cons
 2. Na Cloudflare, adicione o domínio ao plano gratuito e copie os dois servidores DNS indicados.
 3. No Registro.br, troque os servidores DNS do domínio pelos da Cloudflare.
 4. No Worker `ra-tech-energia`, abra **Settings › Domains & Routes › Add › Custom Domain**.
-5. No lançamento, retire o `noindex` do site.
+5. No lançamento, retire o `noindex` do site. **Feito em 2026-11-24.**
+
+### Situação em 2026-11-24
+
+- Passos 1 a 5 feitos: `https://ratechenergia.com.br` abre o site.
+- Falta, no painel da Cloudflare: adicionar `www.ratechenergia.com.br` como Custom Domain do Worker e ativar **Always Use HTTPS** (SSL/TLS › Edge Certificates).
+- Depois do lançamento, vale cadastrar o site no Google Search Console e enviar o mapa `https://ratechenergia.com.br/sitemap-index.xml`.
 
 O e-mail `contato@ratechenergia.com.br` pode ser encaminhado para uma caixa existente com o Email
 Routing da Cloudflare, disponível no plano gratuito. Ele só recebe mensagens; para enviar com esse

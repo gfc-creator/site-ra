@@ -19,6 +19,7 @@ Esta é uma **recomendação para um site institucional de conteúdo**. Loja, lo
 | Tokens da marca | Formato DTCG 2025.10, com Style Dictionary | 5.8.0 | Primeira versão estável do formato; a marca fica numa fonte única |
 | Fontes | API de fontes do Astro | incluída | Serve as fontes do próprio site, sem chamadas a terceiros |
 | Imagens | `astro:assets`, com sharp | 0.35.5 | AVIF/WebP e tamanhos corretos na compilação |
+| Mapa do site | `@astrojs/sitemap` | 3.7.4 | Gera `sitemap-index.xml` para a busca; versão mais nova com mais de duas semanas em 2026-11-24 |
 | Conteúdo | Coleções do Astro, em Markdown no repositório | incluída | Sem banco de dados e sem mensalidade |
 | Animação | CSS e View Transitions | nativo | Sem peso extra; respeita `prefers-reduced-motion` |
 | Formatação | Prettier, com `prettier-plugin-astro` | 3.10.1 / 1.1.2 | Padrão único de código |
