@@ -34,4 +34,5 @@ Uma linha por decisão, sem apagar o histórico: decisão revista ganha nova lin
 | D-27 | Logo **Núcleo de energia** (revê D-21) | Decidida | 2026-11-18 | Escolha do dono na segunda rodada; `marca/README.md` |
 | D-28 | Página de dicas sobre o funcionamento dos sistemas e economia de energia, com textos próprios | Decidida | 2026-11-23 | Pedido do dono; `dicas.md` |
 | D-29 | Incluir vídeos de redes sociais nas dicas, carregados só após o clique e com crédito ao autor | Decidida | 2026-11-23 | Escolha do dono (opção B) |
+| D-30 | Liberar o site para a busca, com mapa do site, endereço canônico e imagem de compartilhamento | Decidida | 2026-11-24 | "Sim" do dono ao PR de lançamento |
 | D-09 | Licença do repositório | Proposta: decidir antes da Fase 2 | 2026-11-18 | Repositório público sem licença: o código é visível, mas sem permissão de uso |

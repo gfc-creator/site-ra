@@ -12,6 +12,8 @@ interface Props {
 
 const { titulo, descricao } = Astro.props;
 const tituloCompleto = titulo ? `${titulo} | ${empresa.marca}` : empresa.marca;
+const canonico = new URL(Astro.url.pathname, Astro.site).href;
+const imagem = new URL("/og.png", Astro.site).href;
 ---
 
 <!doctype html>
@@ -21,11 +23,19 @@ const tituloCompleto = titulo ? `${titulo} | ${empresa.marca}` : empresa.marca;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{tituloCompleto}</title>
     <meta name="description" content={descricao} />
-    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={canonico} />
     <meta property="og:title" content={tituloCompleto} />
     <meta property="og:description" content={descricao} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content={canonico} />
+    <meta property="og:site_name" content={empresa.marca} />
+    <meta property="og:image" content={imagem} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logo da RA Tech Energia" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <Font cssVariable="--fonte-titulo" preload />

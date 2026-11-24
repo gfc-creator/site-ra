@@ -21,7 +21,7 @@ estão em [`empresa.md`](empresa.md).
 | P4 | Quais páginas são necessárias? Haverá blog, notícias, loja ou área de cliente? | Arquitetura; loja ou login mudam a pilha | Pendente |
 | P5 | Quem vai atualizar o conteúdo depois de pronto, e com que frequência? | Painel de edição ou edição pelo repositório | Pendente |
 | P6 | O contato será só por WhatsApp? | Formulário exige envio de e-mail e tratamento de dados | Kit indica WhatsApp; falta confirmar |
-| P7 | Qual domínio registrar? | Publicação e e-mail | **Respondida:** `ratechenergia.com.br`, a registrar pelo dono |
+| P7 | Qual domínio registrar? | Publicação e e-mail | **Respondida:** `ratechenergia.com.br`, registrado pelo dono e no ar |
 | P14 | Mantém RA Tech mesmo com a marca RA TECHNOLOGICS registrada? | Logo, domínio e risco jurídico | **Respondida:** o nome será sempre completo, RA Tech Energia (2026-11-18) |
 | P8 | O site será só em português? | Estrutura de idiomas | Pendente |
 | P9 | Há prazo e limite de custo mensal? | Escolha de serviços pagos | Pendente |

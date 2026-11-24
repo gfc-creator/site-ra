@@ -16,6 +16,9 @@ Ficam em `public/marca/`, em SVG, com o texto convertido em curvas.
 
 Ícones do site: `public/favicon.svg` e `public/apple-touch-icon.png`.
 
+Imagem de compartilhamento: `public/og.png`, 1200 × 630 px, com o logo horizontal escuro sobre o azul
+`#081830`. É a prévia que aparece ao enviar o link no WhatsApp e nas redes.
+
 ## Regras de uso
 
 - Abaixo de 48 px de altura, use o símbolo reduzido.

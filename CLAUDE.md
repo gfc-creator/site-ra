@@ -18,13 +18,14 @@ Criar a **identidade visual** e o **site** da RA Tech Energia.
 | Empresa | AF Carneiro Engenharia e Empreendimentos Sustentáveis Ltda | `docs/empresa.md` |
 | Marca do site | **RA Tech Energia**, sempre com o nome completo | Definido pelo dono (2026-11-18) |
 | Frentes do site | TI/Cloud e energia solar | Definido pelo dono (2026-11-18) |
-| Páginas, idioma e domínio | **A definir**; nenhum domínio registrado | `docs/visao-geral.md` §3 |
+| Domínio | `ratechenergia.com.br`, registrado pelo dono e no ar | `docs/hospedagem-e-dominio.md` |
+| Páginas e idioma | **A definir** | `docs/visao-geral.md` §3 |
 | Pilha técnica | Aprovada como referência inicial | `docs/decisoes.md` |
 
 ## Estado atual
 
-Site de testes publicado na Cloudflare, com o logo Núcleo de energia (`docs/marca/README.md`).
-Próxima etapa: conectar o domínio `ratechenergia.com.br`, depois de registrado pelo dono.
+Site no ar em `https://ratechenergia.com.br`, na Cloudflare, liberado para a busca desde
+2026-11-24 (D-30). Falta o dono configurar `www` e Always Use HTTPS no painel.
 
 Comandos: `npm run dev`, `npm run check`, `npm run format:check` e `npm test`.
 
